@@ -1,0 +1,466 @@
+/*
+  site.css — Estilos del sitio MediaFranca
+
+  Construye sobre tokens.css. Diseño plano y editorial: papel cálido,
+  reglas finas en vez de tarjetas con sombra pesada, tipografía IBM Plex.
+  Prioriza la lectura y cumple contraste WCAG AA. El layout es de una sola
+  página con navegación fija por anclas.
+*/
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  /* Compensa la altura del header fijo al saltar a un ancla. */
+  scroll-padding-top: calc(var(--sn-header-h) + var(--sn-s-4));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  background-color: var(--sn-paper);
+  color: var(--sn-ink);
+  font-family: var(--sn-font-text);
+  font-weight: 400;
+  font-size: var(--sn-fs-base);
+  line-height: var(--sn-leading);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- Enlace de salto (accesibilidad de teclado) --------------------- */
+
+.skip-link {
+  position: absolute;
+  left: var(--sn-s-3);
+  top: -4rem;
+  z-index: var(--sn-z-skip);
+  background: var(--sn-nova);
+  color: var(--sn-nova-ink);
+  padding: var(--sn-s-2) var(--sn-s-4);
+  border-radius: var(--sn-radius);
+  text-decoration: none;
+  transition: top var(--sn-dur-1) var(--sn-ease);
+}
+.skip-link:focus { top: var(--sn-s-3); }
+
+/* ---- Foco visible global -------------------------------------------- */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--sn-nova);
+  outline-offset: 2px;
+  border-radius: var(--sn-radius-s);
+}
+
+/* ---- Contenedor ----------------------------------------------------- */
+
+.shell {
+  width: 100%;
+  max-width: var(--sn-shell);
+  margin-inline: auto;
+  padding-inline: var(--sn-s-5);
+}
+
+@media (max-width: 40rem) {
+  .shell { padding-inline: var(--sn-s-4); }
+}
+
+/* ---- Header fijo ---------------------------------------------------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--sn-z-header);
+  background: color-mix(in oklab, var(--sn-paper) 88%, transparent);
+  backdrop-filter: saturate(1.4) blur(8px);
+  border-bottom: var(--sn-hair);
+}
+.site-header .bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sn-s-4);
+  height: var(--sn-header-h);
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sn-s-2);
+  font-family: var(--sn-font-display);
+  font-weight: 600;
+  font-size: var(--sn-fs-md);
+  letter-spacing: -0.01em;
+  color: var(--sn-ink);
+  text-decoration: none;
+}
+.brand .mark { display: block; }
+
+/* Navegación por anclas */
+.site-nav ul {
+  display: flex;
+  align-items: center;
+  gap: var(--sn-s-5);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-nav a {
+  color: var(--sn-ink-soft);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: var(--sn-fs-xs);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.site-nav a:hover,
+.site-nav a[aria-current="true"] { color: var(--sn-nova); }
+
+/* Conmutadores (idioma y tema) */
+.switches { display: inline-flex; align-items: center; gap: var(--sn-s-4); }
+.lang, .theme-toggle { display: inline-flex; align-items: center; }
+.lang {
+  gap: var(--sn-s-1);
+  font-size: var(--sn-fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.lang button,
+.theme-toggle button {
+  background: transparent;
+  border: 0;
+  padding: var(--sn-s-1) var(--sn-s-2);
+  font: inherit;
+  /* ink-soft (no ink-faint) para mantener contraste AA en el botón inactivo. */
+  color: var(--sn-ink-soft);
+  cursor: pointer;
+  border-radius: var(--sn-radius);
+}
+.lang button[aria-pressed="true"] { color: var(--sn-nova); font-weight: 600; }
+.theme-toggle button { display: inline-flex; }
+.theme-toggle svg { display: block; }
+
+/* El menú hamburguesa solo aparece en pantallas estrechas. */
+.nav-toggle { display: none; }
+
+@media (max-width: 60rem) {
+  .nav-toggle {
+    display: inline-flex;
+    background: transparent;
+    border: 0;
+    padding: var(--sn-s-2);
+    color: var(--sn-ink);
+    cursor: pointer;
+  }
+  .site-nav {
+    position: absolute;
+    top: var(--sn-header-h);
+    left: 0;
+    right: 0;
+    background: var(--sn-paper);
+    border-bottom: var(--sn-hair);
+    box-shadow: var(--sn-lift-soft);
+    display: none;
+  }
+  .site-nav[data-open="true"] { display: block; }
+  .site-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: var(--sn-s-2) var(--sn-s-5);
+  }
+  .site-nav li { width: 100%; }
+  .site-nav a { display: block; padding: var(--sn-s-3) 0; font-size: var(--sn-fs-sm); }
+}
+
+/* ---- Tipografía de contenido --------------------------------------- */
+
+h1, h2, h3, h4 {
+  font-family: var(--sn-font-display);
+  color: var(--sn-ink);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+h2 { font-size: var(--sn-fs-xl); margin: 0 0 var(--sn-s-4); }
+h3 { font-size: var(--sn-fs-lg); margin: var(--sn-s-6) 0 var(--sn-s-3); }
+h4 { font-size: var(--sn-fs-md); margin: var(--sn-s-4) 0 var(--sn-s-2); }
+
+p { margin: 0 0 var(--sn-s-4); max-width: var(--sn-measure); }
+.lede { font-size: var(--sn-fs-md); color: var(--sn-ink); max-width: 34em; }
+
+a { color: var(--sn-link); text-underline-offset: 0.15em; text-decoration-color: color-mix(in oklab, var(--sn-link) 40%, transparent); }
+a:hover { color: var(--sn-link-hover); text-decoration-color: currentColor; }
+a:visited { color: var(--sn-link-visited); }
+
+strong { font-weight: 600; color: var(--sn-ink); }
+em { font-style: italic; }
+
+/* ---- Secciones ------------------------------------------------------ */
+
+section[id] {
+  padding-block: var(--sn-s-7);
+  border-top: var(--sn-hair);
+}
+section[id]:first-of-type { border-top: 0; }
+
+.section-eyebrow {
+  display: block;
+  font-size: var(--sn-fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--sn-nova);
+  margin-bottom: var(--sn-s-2);
+  font-weight: 600;
+}
+
+/* ---- Hero ----------------------------------------------------------- */
+
+.hero { padding-block: var(--sn-s-7) var(--sn-s-7); border-top: 0; }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: var(--sn-s-8);
+  align-items: center;
+}
+.hero-title {
+  font-size: var(--sn-fs-page-title);
+  margin: 0 0 var(--sn-s-4);
+  line-height: 1.05;
+}
+.hero .status {
+  display: inline-block;
+  font-size: var(--sn-fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--sn-nova);
+  font-weight: 600;
+  margin-bottom: var(--sn-s-4);
+}
+.hero-cta { display: flex; flex-wrap: wrap; gap: var(--sn-s-3); margin-top: var(--sn-s-5); }
+
+/* ---- Botones -------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sn-s-2);
+  padding: var(--sn-s-2) var(--sn-s-5);
+  border-radius: var(--sn-radius);
+  border: var(--sn-hair);
+  background: var(--sn-sunk);
+  color: var(--sn-ink);
+  font: inherit;
+  font-weight: 500;
+  font-size: var(--sn-fs-sm);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--sn-dur-1) var(--sn-ease), border-color var(--sn-dur-1) var(--sn-ease);
+}
+.btn:hover { background: var(--sn-paper); border-color: var(--sn-ink-faint); }
+.btn-primary {
+  background: var(--sn-nova);
+  color: var(--sn-nova-ink);
+  border-color: var(--sn-nova);
+}
+.btn-primary:hover {
+  background: color-mix(in oklab, var(--sn-nova) 86%, black);
+  color: var(--sn-nova-ink);
+}
+
+/* ---- Constelación --------------------------------------------------- */
+
+.constellation-wrap { position: relative; }
+#constellation {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+#constellation canvas { display: block; width: 100%; height: 100%; }
+.constellation-tip {
+  position: absolute;
+  pointer-events: none;
+  display: none;
+  transform: translate(-50%, -140%);
+  background: var(--sn-ink);
+  color: var(--sn-paper);
+  padding: var(--sn-s-1) var(--sn-s-2);
+  border-radius: var(--sn-radius);
+  font-size: var(--sn-fs-xs);
+  font-family: var(--sn-font-mono);
+  white-space: nowrap;
+  box-shadow: var(--sn-lift-soft);
+}
+.constellation-caption {
+  font-size: var(--sn-fs-xs);
+  color: var(--sn-ink-soft);
+  text-align: center;
+  margin-top: var(--sn-s-2);
+}
+
+/* ---- Los tres círculos (misión anidada) ---------------------------- */
+
+.circles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sn-s-4);
+  margin-top: var(--sn-s-5);
+}
+.circle-card {
+  border: var(--sn-hair);
+  border-radius: var(--sn-radius-l);
+  padding: var(--sn-s-5);
+  background: var(--sn-field);
+  border-top: 3px solid var(--circle-color, var(--sn-hairline));
+}
+.circle-card .n {
+  font-family: var(--sn-font-mono);
+  font-size: var(--sn-fs-xs);
+  color: var(--circle-color, var(--sn-ink-faint));
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+.circle-card h3 { margin: var(--sn-s-2) 0 var(--sn-s-2); font-size: var(--sn-fs-md); }
+.circle-card p { font-size: var(--sn-fs-sm); color: var(--sn-ink-soft); margin: 0; }
+
+/* ---- Principios ----------------------------------------------------- */
+
+.principles {
+  list-style: none;
+  padding: 0;
+  margin: var(--sn-s-5) 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sn-s-5) var(--sn-s-6);
+}
+.principles li { max-width: none; }
+.principles .p-title { display: block; font-weight: 600; color: var(--sn-ink); margin-bottom: var(--sn-s-1); }
+.principles .p-body { font-size: var(--sn-fs-sm); color: var(--sn-ink-soft); }
+
+/* ---- Fichas de proyectos ------------------------------------------- */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sn-s-4);
+  margin-top: var(--sn-s-5);
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sn-s-2);
+  border: var(--sn-hair);
+  border-radius: var(--sn-radius-l);
+  padding: var(--sn-s-5);
+  background: var(--sn-field);
+  transition: box-shadow var(--sn-dur-1) var(--sn-ease), transform var(--sn-dur-1) var(--sn-ease);
+}
+.project:hover { box-shadow: var(--sn-lift-soft); transform: translateY(-2px); }
+.project-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--sn-s-2); }
+.project-name {
+  font-family: var(--sn-font-display);
+  font-weight: 600;
+  font-size: var(--sn-fs-md);
+  color: var(--sn-ink);
+}
+.project .circle-tag {
+  font-family: var(--sn-font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--sn-paper);
+  background: var(--circle-color, var(--sn-aliados));
+  padding: 0.1rem 0.45rem;
+  border-radius: var(--sn-radius-pill);
+  white-space: nowrap;
+}
+.project .desc { font-size: var(--sn-fs-sm); color: var(--sn-ink-soft); margin: 0; flex: 1; }
+.project .links { display: flex; flex-wrap: wrap; gap: var(--sn-s-3); margin-top: auto; padding-top: var(--sn-s-2); }
+.project .links a {
+  font-size: var(--sn-fs-xs);
+  font-family: var(--sn-font-mono);
+  text-decoration: none;
+  color: var(--sn-ink-soft);
+}
+.project .links a:hover { color: var(--sn-nova); }
+.project .status-chip {
+  font-size: 0.68rem;
+  color: var(--sn-ink-faint);
+  font-style: italic;
+}
+
+/* ---- Definiciones (organización) ----------------------------------- */
+
+.meta-dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--sn-s-3) var(--sn-s-5);
+  margin: var(--sn-s-5) 0 0;
+  max-width: var(--sn-measure);
+}
+.meta-dl dt {
+  font-size: var(--sn-fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--sn-nova);
+  font-weight: 600;
+}
+.meta-dl dd { margin: 0; font-size: var(--sn-fs-sm); }
+
+/* ---- Notas al pie --------------------------------------------------- */
+
+.footnote-ref { font-size: 0.7em; }
+.footnote-ref a { text-decoration: none; }
+.footnotes { margin-top: var(--sn-s-6); }
+.footnotes ol { padding-left: var(--sn-s-4); }
+.footnotes li { font-size: var(--sn-fs-sm); color: var(--sn-ink-soft); margin-bottom: var(--sn-s-2); max-width: var(--sn-measure); }
+
+/* ---- Pie de página -------------------------------------------------- */
+
+.site-footer {
+  border-top: var(--sn-hair);
+  padding-block: var(--sn-s-6);
+  margin-top: var(--sn-s-6);
+}
+.site-footer p { font-size: var(--sn-fs-sm); color: var(--sn-ink-soft); }
+
+/* ---- Mecánica de idioma (spans duales) ------------------------------ */
+/*
+  El contenido bilingüe vive como pares de <span data-lang="es|en">. Por
+  defecto se oculta todo lo traducible y solo se muestra lo marcado como
+  activo (.is-active). El HTML trae los <span data-lang="es"> ya activos,
+  de modo que el sitio es legible en español aunque JavaScript no cargue.
+*/
+[data-lang] { display: none; }
+[data-lang].is-active { display: inline; }
+/* Bloques que deben ocupar su propia línea cuando están activos. */
+p[data-lang].is-active,
+.desc[data-lang].is-active { display: block; }
+
+/* ---- Responsivo ----------------------------------------------------- */
+
+@media (max-width: 60rem) {
+  .hero-grid { grid-template-columns: 1fr; gap: var(--sn-s-6); }
+  .hero-grid .constellation-wrap { order: -1; max-width: 26rem; margin-inline: auto; width: 100%; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .circles { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 40rem) {
+  .projects-grid { grid-template-columns: 1fr; }
+  .principles { grid-template-columns: 1fr; }
+  .meta-dl { grid-template-columns: 1fr; gap: var(--sn-s-1) 0; }
+  .meta-dl dt { margin-top: var(--sn-s-3); }
+}
+
+/* ---- Impresión ------------------------------------------------------ */
+
+@media print {
+  .site-header, .site-footer, .switches, .constellation-wrap, .hero-cta { display: none; }
+  body { background: #fff; color: #000; }
+  section[id] { border-color: #ccc; page-break-inside: avoid; }
+}

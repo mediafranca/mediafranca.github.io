@@ -1,0 +1,249 @@
+/*
+  tokens.css — Lenguaje de diseño de MediaFranca
+
+  Tokens portados desde stella-nova-gui (github.com/hspencer/stella-nova-gui),
+  el sistema de diseño de referencia. Se conserva el modelo de tres capas de
+  Material 3:
+
+    Capa 1 · Primitivos   --sn-[color]-[tono]   (paleta cruda, nunca se renombra)
+    Capa 2 · Semánticos   --sn-paper, --sn-ink  (roles del sistema; aquí vive el tema)
+    Capa 3 · Componente   --sn-btn-*, --sn-field-*
+
+  La metáfora es la "página de papel": una hoja cálida flotando sobre un
+  espacio de taller gris, con un acento carmesí (la "nova"). El tema se
+  conmuta en la capa semántica mediante [data-sn-theme="dark"]; por defecto
+  respeta la preferencia del sistema operativo.
+*/
+
+:root {
+  /* ---- Capa 1 · Primitivos ------------------------------------------- */
+
+  /* Papel: neutros cálidos claros */
+  --sn-papel-50:  #fcfbf7;
+  --sn-papel-75:  #f4f2ed;
+  --sn-papel-100: #f3f0e7;
+  --sn-papel-200: #efece2;
+  --sn-papel-300: #ece7da;
+  --sn-papel-400: #e8e4da;
+  --sn-papel-500: #e7e1d3;
+  --sn-papel-600: #ddd6c7;
+  --sn-papel-700: #a39a86;
+  --sn-papel-800: #968c7c;
+
+  /* Tinta: neutros cálidos oscuros */
+  --sn-tinta-300: #756d5d;
+  --sn-tinta-400: #6b6357;
+  --sn-tinta-500: #353123;
+  --sn-tinta-600: #2c2410;
+  --sn-tinta-650: #2a2719;
+  --sn-tinta-700: #262318;
+  --sn-tinta-750: #221f1a;
+  --sn-tinta-800: #1e1c15;
+  --sn-tinta-850: #1a0f0b;
+  --sn-tinta-900: #181610;
+  --sn-tinta-950: #141209;
+
+  /* Rojo: acento carmesí (nova) */
+  --sn-rojo-500: #ae2d13;
+  --sn-rojo-600: #b21e3e;
+  --sn-rojo-700: #962c08;
+  --sn-rojo-900: #612403;
+
+  /* Acentos complementarios */
+  --sn-coral-300:  #c8a89a;
+  --sn-coral-400:  #ff6b7e;
+  --sn-rosa-300:   #e6acb7;
+  --sn-rosa-400:   #c98592;
+  --sn-azul-200:   #b3cef2;
+  --sn-azul-300:   #8fb4e8;
+  --sn-azul-600:   #1d416e;
+  --sn-malva-400:  #a99cae;
+  --sn-verde-400:  #6cc18a;
+  --sn-verde-500:  #2f6f43;
+  --sn-masking-300:#f7db7e;
+  --sn-masking-500:#d9a14b;
+  --sn-masking-700:#8a5a12;
+  --sn-masking-900:#5a4416;
+  --sn-blanco:     #ffffff;
+
+  /* ---- Capa 2 · Semánticos (tema claro por defecto) ------------------ */
+
+  --sn-field:       var(--sn-papel-75);
+  --sn-paper:       var(--sn-papel-50);
+  --sn-paper-edge:  var(--sn-papel-100);
+  --sn-sunk:        var(--sn-papel-200);
+
+  --sn-ink:         var(--sn-tinta-750);
+  --sn-ink-soft:    var(--sn-tinta-400);
+  --sn-ink-faint:   var(--sn-papel-800);
+  --sn-hairline:    var(--sn-papel-600);
+  --sn-hairline-soft: var(--sn-papel-500);
+
+  --sn-nova:        var(--sn-rojo-500);
+  --sn-nova-ink:    var(--sn-blanco);
+  --sn-nova-wash:   #f7e9e6;
+
+  --sn-link:         var(--sn-rojo-500);
+  --sn-link-hover:   var(--sn-rojo-700);
+  --sn-link-visited: var(--sn-rojo-900);
+
+  --sn-ok:      var(--sn-verde-500);
+  --sn-warn:    var(--sn-masking-700);
+  --sn-danger:  var(--sn-rojo-600);
+
+  /* Colores de círculo, usados por la constelación y las fichas.
+     Cada círculo de la misión anidada tiene su propio matiz. */
+  --sn-circulo-1: var(--sn-azul-600);   /* convivencialidad */
+  --sn-circulo-2: var(--sn-verde-500);  /* lenguaje abierto */
+  --sn-circulo-3: var(--sn-rojo-500);   /* accesibilidad cognitiva / CAA */
+  --sn-aliados:   var(--sn-tinta-400);  /* aliados institucionales */
+
+  /* ---- Tipografía ---------------------------------------------------- */
+
+  --sn-font-sans:  "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --sn-font-serif: "IBM Plex Serif", "Iowan Old Style", Palatino, Georgia, serif;
+  --sn-font-mono:  "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --sn-font-text:    var(--sn-font-sans);
+  --sn-font-display: var(--sn-font-serif);
+  --sn-font-quote:   var(--sn-font-serif);
+
+  --sn-font-scale: 1;
+  --sn-leading: 1.61;
+
+  /* Tamaños fluidos (clamp): escalan con el ancho de la ventana */
+  --sn-fs-xs:         clamp(.72rem, .70rem + .10vw, .78rem);
+  --sn-fs-sm:         clamp(.82rem, .79rem + .14vw, .90rem);
+  --sn-fs-base:       calc(clamp(1.04rem, 1rem + .18vw, 1.1rem) * var(--sn-font-scale));
+  --sn-fs-md:         calc(clamp(1.15rem, 1.1rem + .24vw, 1.28rem) * var(--sn-font-scale));
+  --sn-fs-lg:         calc(clamp(1.2rem, 1.12rem + .40vw, 1.42rem) * var(--sn-font-scale));
+  --sn-fs-xl:         calc(clamp(1.35rem, 1.22rem + .55vw, 1.62rem) * var(--sn-font-scale));
+  --sn-fs-display:    calc(clamp(1.5rem, 1.32rem + .85vw, 2rem) * var(--sn-font-scale));
+  --sn-fs-page-title: calc(clamp(1.85rem, 1.55rem + 1.3vw, 2.5rem) * var(--sn-font-scale));
+
+  /* ---- Espaciado (escala 1.5) --------------------------------------- */
+
+  --sn-s-1: .25rem;
+  --sn-s-2: .5rem;
+  --sn-s-3: .75rem;
+  --sn-s-4: 1rem;
+  --sn-s-5: 1.5rem;
+  --sn-s-6: 2.25rem;
+  --sn-s-7: 3.5rem;
+  --sn-s-8: 5.25rem;
+
+  /* ---- Dimensiones --------------------------------------------------- */
+
+  --sn-measure: 40rem;   /* medida de lectura cómoda */
+  --sn-shell:   82rem;   /* ancho máximo del contenedor */
+  --sn-header-h: 3.5rem;
+
+  /* ---- Radios -------------------------------------------------------- */
+
+  --sn-radius-s:     2px;
+  --sn-radius:       4px;
+  --sn-radius-l:     8px;
+  --sn-radius-paper: 3px;
+  --sn-radius-pill:  999px;
+
+  --sn-hair: 1px solid var(--sn-hairline);
+
+  /* ---- Sombras (elevación sutil, "papel que levita") ---------------- */
+
+  --sn-lift-paper: 0 1px 1px rgba(40, 33, 20, .03), 0 3px 8px rgba(40, 33, 20, .04);
+  --sn-lift:       0 1px 2px rgba(40, 33, 20, .05), 0 8px 24px rgba(40, 33, 20, .08);
+  --sn-lift-soft:  0 2px 8px rgba(40, 33, 20, .05);
+
+  /* ---- Movimiento ---------------------------------------------------- */
+
+  --sn-motion: 1;
+  --sn-dur-1: calc(120ms * var(--sn-motion));
+  --sn-dur-2: calc(220ms * var(--sn-motion));
+  --sn-dur-3: calc(420ms * var(--sn-motion));
+  --sn-ease: cubic-bezier(.22, 1, .36, 1);
+
+  --sn-z-header: 20;
+  --sn-z-skip:   60;
+}
+
+/*
+  Tema oscuro. Se activa de dos maneras:
+    1. Automáticamente, si el sistema operativo lo prefiere (media query).
+    2. Explícitamente, si el usuario fija [data-sn-theme="dark"] en <html>.
+  Solo se redefine la capa semántica: los primitivos no cambian.
+*/
+@media (prefers-color-scheme: dark) {
+  :root:not([data-sn-theme="light"]) {
+    --sn-field:      var(--sn-tinta-950);
+    --sn-paper:      var(--sn-tinta-800);
+    --sn-paper-edge: var(--sn-tinta-700);
+    --sn-sunk:       var(--sn-tinta-900);
+
+    --sn-ink:        var(--sn-papel-300);
+    --sn-ink-soft:   var(--sn-papel-700);
+    --sn-ink-faint:  var(--sn-tinta-300);
+    --sn-hairline:   var(--sn-tinta-500);
+    --sn-hairline-soft: var(--sn-tinta-650);
+
+    --sn-nova:       var(--sn-coral-400);
+    --sn-nova-ink:   var(--sn-tinta-850);
+    --sn-nova-wash:  #2b1c1d;
+
+    --sn-link:         var(--sn-coral-400);
+    --sn-link-hover:   var(--sn-rosa-300);
+    --sn-link-visited: var(--sn-coral-300);
+
+    --sn-ok:     var(--sn-verde-400);
+    --sn-warn:   var(--sn-masking-500);
+    --sn-danger: var(--sn-coral-400);
+
+    --sn-circulo-1: var(--sn-azul-300);
+    --sn-circulo-2: var(--sn-verde-400);
+    --sn-circulo-3: var(--sn-coral-400);
+    --sn-aliados:   var(--sn-papel-700);
+
+    --sn-lift-paper: 0 1px 1px rgba(0,0,0,.25), 0 3px 10px rgba(0,0,0,.35);
+    --sn-lift:       0 1px 2px rgba(0,0,0,.35), 0 8px 22px rgba(0,0,0,.45), 0 24px 60px rgba(0,0,0,.4);
+    --sn-lift-soft:  0 2px 12px rgba(0,0,0,.4);
+  }
+}
+
+/* Conmutación explícita a oscuro, gane o no la media query. */
+:root[data-sn-theme="dark"] {
+  --sn-field:      var(--sn-tinta-950);
+  --sn-paper:      var(--sn-tinta-800);
+  --sn-paper-edge: var(--sn-tinta-700);
+  --sn-sunk:       var(--sn-tinta-900);
+
+  --sn-ink:        var(--sn-papel-300);
+  --sn-ink-soft:   var(--sn-papel-700);
+  --sn-ink-faint:  var(--sn-tinta-300);
+  --sn-hairline:   var(--sn-tinta-500);
+  --sn-hairline-soft: var(--sn-tinta-650);
+
+  --sn-nova:       var(--sn-coral-400);
+  --sn-nova-ink:   var(--sn-tinta-850);
+  --sn-nova-wash:  #2b1c1d;
+
+  --sn-link:         var(--sn-coral-400);
+  --sn-link-hover:   var(--sn-rosa-300);
+  --sn-link-visited: var(--sn-coral-300);
+
+  --sn-ok:     var(--sn-verde-400);
+  --sn-warn:   var(--sn-masking-500);
+  --sn-danger: var(--sn-coral-400);
+
+  --sn-circulo-1: var(--sn-azul-300);
+  --sn-circulo-2: var(--sn-verde-400);
+  --sn-circulo-3: var(--sn-coral-400);
+  --sn-aliados:   var(--sn-papel-700);
+
+  --sn-lift-paper: 0 1px 1px rgba(0,0,0,.25), 0 3px 10px rgba(0,0,0,.35);
+  --sn-lift:       0 1px 2px rgba(0,0,0,.35), 0 8px 22px rgba(0,0,0,.45), 0 24px 60px rgba(0,0,0,.4);
+  --sn-lift-soft:  0 2px 12px rgba(0,0,0,.4);
+}
+
+/* Respeta la preferencia de movimiento reducido. */
+@media (prefers-reduced-motion: reduce) {
+  :root { --sn-motion: 0; }
+}

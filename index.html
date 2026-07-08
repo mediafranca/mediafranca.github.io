@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MediaFranca · tecnologías convivenciales para la comunicación humana</title>
+
+  <meta name="description" content="MediaFranca será un sistema de gobernanza para los bienes públicos digitales: software, estándares y contenidos de lenguaje abierto que responden a las comunidades y no a las plataformas. Hoy es una iniciativa que busca socios fundadores. Desde Valparaíso, Chile." />
+  <meta name="author" content="MediaFranca (iniciativa en formación)" />
+  <meta name="theme-color" content="#fcfbf7" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="MediaFranca" />
+  <meta property="og:description" content="Un sistema de gobernanza para los bienes públicos digitales. Una iniciativa que busca socios para custodiar, en común, la tecnología que nos comunica." />
+  <meta property="og:url" content="https://mediafranca.net/" />
+  <meta property="og:locale" content="es_CL" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <link rel="canonical" href="https://mediafranca.net/" />
+
+  <!--
+    Favicon en línea: una pequeña constelación. Un nodo central rojo (nova)
+    y satélites en tinta, coherente con el grafo de proyectos del sitio.
+  -->
+  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='8' fill='%23fcfbf7'/><line x1='32' y1='32' x2='14' y2='18' stroke='%23262318' stroke-width='1' opacity='.45'/><line x1='32' y1='32' x2='50' y2='20' stroke='%23262318' stroke-width='1' opacity='.45'/><line x1='32' y1='32' x2='50' y2='48' stroke='%23262318' stroke-width='1' opacity='.45'/><line x1='32' y1='32' x2='14' y2='48' stroke='%23262318' stroke-width='1' opacity='.45'/><circle cx='14' cy='18' r='2.6' fill='%23262318'/><circle cx='50' cy='20' r='2.6' fill='%23262318'/><circle cx='50' cy='48' r='2.6' fill='%23262318'/><circle cx='14' cy='48' r='2.6' fill='%23262318'/><circle cx='32' cy='32' r='5' fill='%23ae2d13'/></svg>" />
+
+  <!-- IBM Plex (OFL), la familia tipográfica de stella-nova-gui. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+
+<body>
+
+<a class="skip-link" href="#contenido">
+  <span data-lang="es" class="is-active">Saltar al contenido</span>
+  <span data-lang="en">Skip to content</span>
+</a>
+
+<header class="site-header">
+  <div class="shell bar">
+    <a class="brand" href="#top" aria-label="MediaFranca — inicio">
+      <img src="assets/logo/mf.svg" alt="MediaFranca" srcset="assets/logo/mf.svg 1x, assets/logo/mf.svg 2x">
+      
+    </a>
+      <span>MediaFranca</span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu"
+            aria-label="Abrir menú de navegación">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+
+    <nav class="site-nav" id="menu" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#que-es"><span data-lang="es" class="is-active">Qué es</span><span data-lang="en">About</span></a></li>
+        <li><a href="#vision"><span data-lang="es" class="is-active">Visión</span><span data-lang="en">Vision</span></a></li>
+        <li><a href="#mision"><span data-lang="es" class="is-active">Misión</span><span data-lang="en">Mission</span></a></li>
+        <li><a href="#proyectos"><span data-lang="es" class="is-active">Proyectos</span><span data-lang="en">Projects</span></a></li>
+        <li><a href="#participar"><span data-lang="es" class="is-active">Participar</span><span data-lang="en">Join</span></a></li>
+        <li><a href="#contacto"><span data-lang="es" class="is-active">Contacto</span><span data-lang="en">Contact</span></a></li>
+      </ul>
+    </nav>
+
+    <div class="switches">
+      <span class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-set-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </span>
+      <span class="theme-toggle">
+        <button type="button" aria-pressed="false" aria-label="Cambiar entre tema claro y oscuro">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+          </svg>
+        </button>
+      </span>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+  <span id="top"></span>
+
+  <!-- ============ HERO / QUÉ ES ============ -->
+  <section class="hero shell" id="que-es">
+    <div class="hero-grid">
+      <div>
+        <span class="status">
+          <span data-lang="es" class="is-active">Iniciativa en formación · busca socios fundadores · Valparaíso, Chile</span>
+          <span data-lang="en">Initiative in formation · seeking founding partners · Valparaíso, Chile</span>
+        </span>
+        <h1 class="hero-title">MediaFranca</h1>
+        <p class="lede">
+          <span data-lang="es" class="is-active">MediaFranca será un sistema de gobernanza para los bienes públicos digitales. Definirá, custodiará y sostendrá el software, los estándares y los contenidos de lenguaje abierto que las comunidades necesitan para comunicarse y participar del mundo sin depender de plataformas que no controlan.</span>
+          <span data-lang="en">MediaFranca will be a governance system for digital public goods. It will define, steward and sustain the open-language software, standards and content that communities need in order to communicate and take part in the world without depending on platforms they do not control.</span>
+        </p>
+        <p>
+          <span data-lang="es" class="is-active">No será un repositorio de proyectos: será el marco que decide, con principios públicos y auditables, qué merece cuidarse como bien común y cómo se protege de la apropiación privada. Todavía no es una corporación. Hoy es una iniciativa, y busca a las personas que la constituirán.</span>
+          <span data-lang="en">It will not be a repository of projects: it will be the framework that decides, through public and auditable principles, what deserves to be cared for as a commons and how it is protected from private appropriation. It is not a corporation yet. Today it is an initiative, and it is looking for the people who will constitute it.</span>
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#participar">
+            <span data-lang="es" class="is-active">Quiero ser socio</span>
+            <span data-lang="en">I want to join</span>
+          </a>
+          <a class="btn" href="#proyectos">
+            <span data-lang="es" class="is-active">Ver los proyectos</span>
+            <span data-lang="en">See the projects</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="constellation-wrap">
+        <div id="constellation">
+          <div class="constellation-tip" aria-hidden="true"></div>
+        </div>
+        <p class="constellation-caption">
+          <span data-lang="es" class="is-active">Pase el cursor sobre cada nodo. Un clic abre su repositorio.</span>
+          <span data-lang="en">Hover over each node. A click opens its repository.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="shell">
+
+    <!-- ============ VISIÓN ============ -->
+    <section id="vision">
+      <span class="section-eyebrow">
+        <span data-lang="es" class="is-active">Visión</span><span data-lang="en">Vision</span>
+      </span>
+      <h2>
+        <span data-lang="es" class="is-active">La dignidad no puede quedar fuera del debate técnico</span>
+        <span data-lang="en">Human dignity cannot be left out of the technical debate</span>
+      </h2>
+      <p class="lede">
+        <span data-lang="es" class="is-active">La inteligencia artificial concentra hoy un poder sin precedentes, y sin embargo la pregunta por la dignidad de la persona sigue casi ausente del debate público y político.<sup class="footnote-ref"><a href="#fn1" id="fnref1">1</a></sup> Se discute qué puede hacer la tecnología; casi nunca a quién sirve, quién la gobierna y qué reduce a las personas a función, dato o rendimiento.</span>
+        <span data-lang="en">Artificial intelligence now concentrates unprecedented power, and yet the question of human dignity remains almost absent from public and political debate.<sup class="footnote-ref"><a href="#fn1" id="fnref1en">1</a></sup> We discuss what technology can do; almost never whom it serves, who governs it, or what reduces people to function, data or performance.</span>
+      </p>
+      <p>
+        <span data-lang="es" class="is-active">MediaFranca existirá para poner esa pregunta en el centro. La tecnología no es neutral: lleva el rostro de quien la concibe, la financia y la gobierna. Por eso <strong>quién la custodia importa tanto como lo que hace</strong>. Imaginamos un mundo donde las herramientas amplíen lo que somos capaces de hacer, puedan comprenderse y repararse, y respondan ante las comunidades que las usan y no al revés.</span>
+        <span data-lang="en">MediaFranca will exist to put that question at the centre. Technology is not neutral: it bears the face of those who conceive, fund and govern it. That is why <strong>who stewards it matters as much as what it does</strong>. We imagine a world where tools widen what we are capable of, can be understood and repaired, and answer to the communities that use them rather than the other way round.</span>
+      </p>
+      <p>
+        <span data-lang="es" class="is-active">Trabajaremos por <strong>domesticar la tecnología</strong>: volverla habitable, auditable y culturalmente propia, desde Chile y Latinoamérica hacia el mundo. Es una convicción con raíces largas —la de quienes insisten en una técnica a escala humana, gobernada por quienes la usan—<sup class="footnote-ref"><a href="#fn5" id="fnref5">5</a></sup> que hoy vuelve a ser urgente.</span>
+        <span data-lang="en">We will work to <strong>domesticate technology</strong>: to make it habitable, auditable and culturally our own, from Chile and Latin America towards the world. It is a conviction with long roots —that of those who insist on technology at a human scale, governed by those who use it—<sup class="footnote-ref"><a href="#fn5" id="fnref5en">5</a></sup> and one that is urgent again today.</span>
+      </p>
+    </section>
+
+    <!-- ============ MISIÓN ============ -->
+    <section id="mision">
+      <span class="section-eyebrow">
+        <span data-lang="es" class="is-active">Misión</span><span data-lang="en">Mission</span>
+      </span>
+      <h2>
+        <span data-lang="es" class="is-active">Gobernar y custodiar el bien común digital</span>
+        <span data-lang="en">Governing and stewarding the digital commons</span>
+      </h2>
+      <p>
+        <span data-lang="es" class="is-active">MediaFranca custodiará proyectos de lenguaje abierto —software, estándares, esquemas y contenidos— y, sobre todo, definirá las reglas para hacerlo. Será un sistema de gobernanza: una comunidad de expertos y de personas usuarias que decide, de cara al público, qué es un bien público digital<sup class="footnote-ref"><a href="#fn4" id="fnref4b">4</a></sup> y cómo se sostiene en el tiempo, con la colaboración de universidades, profesionales y quienes dependen de estas herramientas para participar del mundo.</span>
+        <span data-lang="en">MediaFranca will steward open-language projects —software, standards, schemas and content— and, above all, it will define the rules for doing so. It will be a governance system: a community of experts and users that decides, in public, what a digital public good is<sup class="footnote-ref"><a href="#fn4" id="fnref4ben">4</a></sup> and how it is sustained over time, together with universities, professionals and those who depend on these tools to take part in the world.</span>
+      </p>
+      <p>
+        <span data-lang="es" class="is-active">Custodiar no será archivar. Significará financiar y mantener el desarrollo, vigilar los estándares, proteger los comunes de la apropiación privada y garantizar que el conocimiento circule libremente. <strong>La custodia será activa, o no será.</strong></span>
+        <span data-lang="en">Stewardship will not mean archiving. It will mean funding and maintaining development, watching over standards, protecting the commons from private appropriation and ensuring that knowledge circulates freely. <strong>Stewardship will be active, or it will not be at all.</strong></span>
+      </p>
+
+      <h3>
+        <span data-lang="es" class="is-active">La estructura anidada</span>
+        <span data-lang="en">The nested structure</span>
+      </h3>
+      <p>
+        <span data-lang="es" class="is-active">La misión operará en tres círculos concéntricos. Cada círculo contiene y da sentido al siguiente: la convivencialidad es el horizonte, el lenguaje abierto es el medio, y la accesibilidad cognitiva es el primer dominio donde todo esto se encarna.</span>
+        <span data-lang="en">The mission will operate in three concentric circles. Each contains and gives meaning to the next: conviviality is the horizon, open language is the medium, and cognitive accessibility is the first domain where all of this is embodied.</span>
+      </p>
+
+      <div class="circles">
+        <div class="circle-card" style="--circle-color: var(--sn-circulo-1)">
+          <span class="n">01</span>
+          <h3>
+            <span data-lang="es" class="is-active">Convivencialidad</span>
+            <span data-lang="en">Conviviality</span>
+          </h3>
+          <p>
+            <span data-lang="es" class="is-active">El horizonte ético. Siguiendo a Illich, una herramienta es convivencial cuando amplía el radio de acción de la persona sin volverla dependiente.<sup class="footnote-ref"><a href="#fn2" id="fnref2">2</a></sup> De aquí derivan el código abierto, el autoalojamiento, la transparencia y la gobernanza comunitaria.</span>
+            <span data-lang="en">The ethical horizon. Following Illich, a tool is convivial when it widens a person's radius of action without making them dependent.<sup class="footnote-ref"><a href="#fn2" id="fnref2en">2</a></sup> From here follow open source, self-hosting, transparency and community governance.</span>
+          </p>
+        </div>
+        <div class="circle-card" style="--circle-color: var(--sn-circulo-2)">
+          <span class="n">02</span>
+          <h3>
+            <span data-lang="es" class="is-active">Lenguaje abierto</span>
+            <span data-lang="en">Open language</span>
+          </h3>
+          <p>
+            <span data-lang="es" class="is-active">El medio. Proyectos que hacen el conocimiento complejo accesible de forma visual y colectiva: comunicación pictográfica, análisis de texto, mapas conceptuales, partituras de interacción que documentan procesos, y wikis semánticas.</span>
+            <span data-lang="en">The medium. Projects that make complex knowledge accessible in a visual and collective way: pictographic communication, text analysis, concept maps, interaction scores that document processes, and semantic wikis.</span>
+          </p>
+        </div>
+        <div class="circle-card" style="--circle-color: var(--sn-circulo-3)">
+          <span class="n">03</span>
+          <h3>
+            <span data-lang="es" class="is-active">Accesibilidad cognitiva y CAA</span>
+            <span data-lang="en">Cognitive accessibility and AAC</span>
+          </h3>
+          <p>
+            <span data-lang="es" class="is-active">El dominio encarnado. Pictogramas para la comunicación aumentativa y alternativa, accesibilidad cognitiva en servicios públicos. Rige el principio <em>nada para nosotros sin nosotros</em>: las personas con discapacidad participan como expertas y coinvestigadoras.</span>
+            <span data-lang="en">The embodied domain. Pictograms for augmentative and alternative communication, cognitive accessibility in public services. The principle <em>nothing about us without us</em> applies: people with disabilities take part as experts and co-researchers.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRINCIPIOS ============ -->
+    <section id="principios">
+      <span class="section-eyebrow">
+        <span data-lang="es" class="is-active">Principios</span><span data-lang="en">Principles</span>
+      </span>
+      <h2>
+        <span data-lang="es" class="is-active">Compromisos que guiarán cada decisión</span>
+        <span data-lang="en">Commitments that will guide every decision</span>
+      </h2>
+      <p>
+        <span data-lang="es" class="is-active">Estos principios no serán decoración: serán el criterio con que se admite un proyecto, se resuelve un conflicto y se rinde cuenta. Formarán el <a href="https://github.com/mediafranca/manifesto">manifiesto</a> que MediaFranca escribirá y revisará junto a su comunidad.</span>
+        <span data-lang="en">These principles will not be decoration: they will be the criterion by which a project is admitted, a conflict is resolved and accountability is given. They will form the <a href="https://github.com/mediafranca/manifesto">manifesto</a> that MediaFranca will write and revise together with its community.</span>
+      </p>
+      <ul class="principles">
+        <li>
+          <span class="p-title"><span data-lang="es" class="is-active">Herramientas que amplifican, no que reemplazan</span><span data-lang="en">Tools that amplify, not replace</span></span>
+          <span class="p-body">
+            <span data-lang="es" class="is-active">La tecnología aumentará la capacidad de las personas para hacer cosas por sí mismas; la validación humana cerrará todo proceso técnico.</span>
+            <span data-lang="en">Technology will increase people's capacity to do things for themselves; human validation will close every technical process.</span>
+          </span>
+        </li>
+        <li>
+          <span class="p-title"><span data-lang="es" class="is-active">Soberanía tecnológica</span><span data-lang="en">Technological sovereignty</span></span>
+          <span class="p-body">
+            <span data-lang="es" class="is-active">Código abierto y autoalojable; los datos de las comunidades pertenecen a las comunidades, sin dependencias de plataformas cerradas.</span>
+            <span data-lang="en">Open and self-hostable code; community data belongs to communities, with no dependence on closed platforms.</span>
+          </span>
+        </li>
+        <li>
+          <span class="p-title"><span data-lang="es" class="is-active">Soberanía del conocimiento</span><span data-lang="en">Knowledge sovereignty</span></span>
+          <span class="p-body">
+            <span data-lang="es" class="is-active">Lo aprendido en los procesos de codiseño será patrimonio común y circulará libremente bajo licencias abiertas.</span>
+            <span data-lang="en">What is learned in co-design processes will be a shared commons and will circulate freely under open licences.</span>
+          </span>
+        </li>
+        <li>
+          <span class="p-title"><span data-lang="es" class="is-active">Inclusión desde el origen</span><span data-lang="en">Inclusion from the start</span></span>
+          <span class="p-body">
+            <span data-lang="es" class="is-active">Un producto que necesita adaptaciones especiales para algunas personas está mal diseñado; el punto de partida es la diversidad humana.</span>
+            <span data-lang="en">A product that needs special adaptations for some people is badly designed; the starting point is human diversity.</span>
+          </span>
+        </li>
+        <li>
+          <span class="p-title"><span data-lang="es" class="is-active">Gobernanza abierta y auditable</span><span data-lang="en">Open, auditable governance</span></span>
+          <span class="p-body">
+            <span data-lang="es" class="is-active">Decisiones, estándares y procesos públicos, vigilados por una comunidad mixta de expertos técnicos y comunidad de uso.</span>
+            <span data-lang="en">Public decisions, standards and processes, watched over by a mixed community of technical experts and users.</span>
+          </span>
+        </li>
+        <li>
+          <span class="p-title"><span data-lang="es" class="is-active">Transparencia como hospitalidad</span><span data-lang="en">Transparency as hospitality</span></span>
+          <span class="p-body">
+            <span data-lang="es" class="is-active">Todo artefacto mostrará su revés: cómo llegó a ser lo que es, quién decidió qué, y cómo apropiárselo.</span>
+            <span data-lang="en">Every artefact will show its underside: how it came to be, who decided what, and how to make it your own.</span>
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ PROYECTOS ============ -->
+    <section id="proyectos">
+      <span class="section-eyebrow">
+        <span data-lang="es" class="is-active">Proyectos bajo custodia</span><span data-lang="en">Stewarded projects</span>
+      </span>
+      <h2>
+        <span data-lang="es" class="is-active">Lo que ya existe y MediaFranca cuidará</span>
+        <span data-lang="en">What already exists and MediaFranca will care for</span>
+      </h2>
+      <p>
+        <span data-lang="es" class="is-active">Estos proyectos ya funcionan hoy, mantenidos por sus autores. MediaFranca los reunirá bajo una custodia común para sostenerlos en el tiempo. La etiqueta de color indica el círculo de la misión al que pertenece cada uno. Lista no exhaustiva.</span>
+        <span data-lang="en">These projects already work today, maintained by their authors. MediaFranca will bring them under shared stewardship to sustain them over time. The colour tag shows which circle of the mission each one belongs to. Non-exhaustive list.</span>
+      </p>
+
+      <div class="projects-grid">
+
+        <!-- Círculo 3 · CAA -->
+        <article class="project" style="--circle-color: var(--sn-circulo-3)">
+          <div class="project-head">
+            <span class="project-name">pictos.net</span>
+            <span class="circle-tag">CAA</span>
+          </div>
+          <p class="desc">
+            <span data-lang="es" class="is-active">Servicio web de pictogramas en producción: generar, editar y organizar localmente, sin depender de plataformas cerradas. Para profesoras, terapeutas y familias.</span>
+            <span data-lang="en">Pictogram web service in production: generate, edit and organise locally, without depending on closed platforms. For teachers, therapists and families.</span>
+          </p>
+          <div class="links">
+            <a href="https://pictos.net">pictos.net ↗</a>
+            <a href="https://github.com/mediafranca/pictos-net">repo ↗</a>
+          </div>
+        </article>
+
+        <article class="project" style="--circle-color: var(--sn-circulo-3)">
+          <div class="project-head">
+            <span class="project-name">ICAP</span>
+            <span class="circle-tag">CAA</span>
+          </div>
+          <p class="desc">
+            <span data-lang="es" class="is-active">Índice de Calidad Pictográfica para la CAA. Marco abierto para medir la adecuación comunicativa de pictogramas, en especial los generados por modelos.</span>
+            <span data-lang="en">Pictographic Quality Index for AAC. An open framework to measure the communicative adequacy of pictograms, especially model-generated ones.</span>
+          </p>
+          <div class="links">
+            <a href="https://github.com/mediafranca/ICAP">github.com/mediafranca/ICAP ↗</a>
+          </div>
+        </article>
+
+        <article class="project" style="--circle-color: var(--sn-circulo-3)">
+          <div class="project-head">
+            <span class="project-name">mf-svg-schema</span>
+            <span class="circle-tag">CAA</span>
+          </div>
+          <p class="desc">
+            <span data-lang="es" class="is-active">Esquema SVG de MediaFranca para pictogramas de CAA. Estructura común para que los pictogramas sean editables, interoperables y accesibles.</span>
+            <span data-lang="en">MediaFranca SVG schema for AAC pictograms. A common structure so pictograms are editable, interoperable and accessible.</span>
+          </p>
+          <div class="links">
+            <a href="https://github.com/mediafranca/mf-svg-schema">github.com/mediafranca/mf-svg-schema ↗</a>
+          </div>
+        </article>
+
+        <article class="project" style="--circle-color: var(--sn-circulo-3)">
+          <div class="project-head">
+            <span class="project-name">nlu-schema</span>
+            <span class="circle-tag">CAA</span>
+          </div>
+          <p class="desc">
+            <span data-lang="es" class="is-active">Esquema JSON para la comprensión de lenguaje natural. Representa la intención comunicativa antes de traducirla a pictogramas u otras salidas.</span>
+            <span data-lang="en">JSON schema for natural-language understanding. It represents communicative intent before translating it into pictograms or other outputs.</span>
+          </p>
+          <div class="links">
+            <a href="https://github.com/mediafranca/nlu-schema">github.com/mediafranca/nlu-schema ↗</a>
+          </div>
+        </article>
+
+        <!-- Círculo 2 · lenguaje abierto -->
+        <article class="project" style="--circle-color: var(--sn-circulo-2)">
+          <div class="project-head">
+            <span class="project-name">con·§tel</span>
+            <span class="circle-tag is-active" data-lang="es">Lenguaje</span><span class="circle-tag" data-lang="en">Language</span>
+          </div>
+          <p class="desc">
+            <span data-lang="es" class="is-active">Lectura, marcación y análisis de textos. Una constelación semántica que amplifica lo vernacular y vuelve visible la estructura de lo que se lee.</span>
+            <span data-lang="en">Reading, annotation and analysis of texts. A semantic constellation that amplifies the vernacular and makes the structure of what we read visible.</span>
+          </p>
+          <div class="links">
+            <a href="https://github.com/hspencer/constel">github.com/hspencer/constel ↗</a>
+          </div>
+        </article>
+
+        <article class="project" style="--circle-color: var(--sn-circulo-2)">
+          <div class="project-head">
+            <span class="project-name">partituras de interacción</span>
+            <span class="circle-tag is-active" data-lang="es">Lenguaje</span><span class="circle-tag" data-lang="en">Language</span>
+          </div>
+          <p class="desc">
+            <span data-lang="es" class="is-active">Notación de interacción para el diseño de experiencias. Documenta procesos de uso como partituras legibles, compartibles y versionables.</span>
+            <span data-lang="en">Interaction notation for experience design. It documents flows of use as readable, shareable and versionable scores.</span>
+          </p>
+          <div class="links">
+            <a href="https://github.com/mediafranca/pix">github.com/mediafranca/pix ↗</a>
+          </div>
+        </article>
+
+        <article class="project" style="--circle-color: var(--sn-circulo-2)">
+          <div class="project-head">
+            <span class="project-name">lectografo</span>
+            <span class="circle-tag is-active" data-lang="es">Lenguaje</span><span class="circle-tag" data-lang="en">Language</span>
+          </div>
+          <p class="desc">
+            <span data-lang="es" class="is-active">Lector de textos como grafos semánticos. Convierte la prosa en una red navegable de conceptos y relaciones.</span>
+            <span data-lang="en">A reader that turns texts into semantic graphs. It converts prose into a navigable network of concepts and relations.</span>
+          </p>
+          <div class="links">
+            <a href="https://github.com/hspencer/lectografo">github.com/hspencer/lectografo ↗</a>
+          </div>
+        </article>
+
+        <!-- Círculo 1 · convivencialidad / soberanía -->
+        <article class="project" style="--circle-color: var(--sn-circulo-1)">
+          <div class="project-head">
+            <span class="project-name">lombardi</span>
+            <span class="circle-tag is-active" data-lang="es">Soberanía</span><span class="circle-tag" data-lang="en">Sovereignty</span>
+          </div>
+          <p class="desc">
+            <span data-lang="es" class="is-active">Grafo de redes de poder a partir de noticias, con IA local. Inspirado en Mark Lombardi: detecta contradicciones entre fuentes sin enviar datos a terceros.</span>
+            <span data-lang="en">A graph of power networks built from the news, with local AI. Inspired by Mark Lombardi: it detects contradictions between sources without sending data to third parties.</span>
+          </p>
+          <div class="links">
+            <a href="https://github.com/hspencer/lombardi">github.com/hspencer/lombardi ↗</a>
+          </div>
+        </article>
+
+        <article class="project" style="--circle-color: var(--sn-circulo-1)">
+          <div class="project-head">
+            <span class="project-name">filippo3d</span>
+            <span class="circle-tag is-active" data-lang="es">Soberanía</span><span class="circle-tag" data-lang="en">Sovereignty</span>
+          </div>
+          <p class="desc">
+            <span data-lang="es" class="is-active">Dibujo en tres dimensiones desde el navegador. Herramienta de creación abierta que explora el gesto y la forma sin software propietario.</span>
+            <span data-lang="en">Three-dimensional drawing in the browser. An open creation tool that explores gesture and form without proprietary software.</span>
+          </p>
+          <div class="links">
+            <a href="https://github.com/mediafranca/filippo3d">github.com/mediafranca/filippo3d ↗</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ PARTICIPAR ============ -->
+    <section id="participar">
+      <span class="section-eyebrow">
+        <span data-lang="es" class="is-active">Participar</span><span data-lang="en">Take part</span>
+      </span>
+      <h2>
+        <span data-lang="es" class="is-active">Buscamos a quienes la constituirán</span>
+        <span data-lang="en">We are looking for the people who will constitute it</span>
+      </h2>
+      <p>
+        <span data-lang="es" class="is-active">MediaFranca será, a futuro, una corporación sin fines de lucro con vocación de bien público digital. Pero antes que una figura jurídica, será un grupo de personas dispuestas a custodiar en común lo que hoy casi nadie cuida. Si crees que la tecnología que nos comunica debe responder a las comunidades y no a unas pocas plataformas, este es tu lugar. Buscamos socios fundadores.</span>
+        <span data-lang="en">MediaFranca will become, in time, a non-profit corporation with a digital public-good vocation. But before a legal form, it will be a group of people willing to steward, in common, what almost no one cares for today. If you believe the technology that connects us should answer to communities and not to a handful of platforms, this is your place. We are looking for founding partners.</span>
+      </p>
+
+      <dl class="meta-dl">
+        <dt><span data-lang="es" class="is-active">Figura futura</span><span data-lang="en">Future vehicle</span></dt>
+        <dd>
+          <span data-lang="es" class="is-active">Corporación sin fines de lucro bajo la <a href="https://www.bcn.cl/leychile/navegar?idNorma=1023143">Ley 20.500</a> de Chile.<sup class="footnote-ref"><a href="#fn3" id="fnref3">3</a></sup> La figura jurídica exacta se decidirá con los socios fundadores.</span>
+          <span data-lang="en">Non-profit corporation under <a href="https://www.bcn.cl/leychile/navegar?idNorma=1023143">Chile's Law 20,500</a>.<sup class="footnote-ref"><a href="#fn3" id="fnref3en">3</a></sup> The exact legal form will be decided with the founding partners.</span>
+        </dd>
+        <dt><span data-lang="es" class="is-active">Domicilio</span><span data-lang="en">Home</span></dt>
+        <dd>Valparaíso, Chile</dd>
+        <dt><span data-lang="es" class="is-active">Objeto</span><span data-lang="en">Purpose</span></dt>
+        <dd>
+          <span data-lang="es" class="is-active">Científico-tecnológico, cultural y educacional. Custodia de bienes públicos digitales, alineada con el <a href="https://digitalpublicgoods.net/standard/">DPG Standard</a>.<sup class="footnote-ref"><a href="#fn4" id="fnref4">4</a></sup></span>
+          <span data-lang="en">Scientific-technological, cultural and educational. Stewardship of digital public goods, aligned with the <a href="https://digitalpublicgoods.net/standard/">DPG Standard</a>.<sup class="footnote-ref"><a href="#fn4" id="fnref4en">4</a></sup></span>
+        </dd>
+        <dt><span data-lang="es" class="is-active">Gobernanza prevista</span><span data-lang="en">Planned governance</span></dt>
+        <dd>
+          <span data-lang="es" class="is-active">Asamblea soberana, directorio electo y consejo técnico mixto de expertos y comunidad de uso.</span>
+          <span data-lang="en">Sovereign assembly, elected board, and a mixed technical council of experts and users.</span>
+        </dd>
+        <dt><span data-lang="es" class="is-active">Perfiles buscados</span><span data-lang="en">Profiles sought</span></dt>
+        <dd>
+          <span data-lang="es" class="is-active">Profesionales de la CAA y la accesibilidad, personas usuarias y familias, desarrolladoras, diseñadoras, investigadoras, universidades y organizaciones afines.</span>
+          <span data-lang="en">AAC and accessibility professionals, users and families, developers, designers, researchers, universities and kindred organisations.</span>
+        </dd>
+      </dl>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="mailto:hola@mediafranca.net?subject=Quiero%20sumarme%20a%20MediaFranca">
+          <span data-lang="es" class="is-active">Escribir a hola@mediafranca.net</span>
+          <span data-lang="en">Write to hola@mediafranca.net</span>
+        </a>
+        <a class="btn" href="https://github.com/mediafranca">
+          <span data-lang="es" class="is-active">Explorar en GitHub</span>
+          <span data-lang="en">Explore on GitHub</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section id="contacto">
+      <span class="section-eyebrow">
+        <span data-lang="es" class="is-active">Contacto</span><span data-lang="en">Contact</span>
+      </span>
+      <h2>
+        <span data-lang="es" class="is-active">Conversemos</span>
+        <span data-lang="en">Let's talk</span>
+      </h2>
+      <p>
+        <span data-lang="es" class="is-active">El código y la discusión pública viven en <a href="https://github.com/mediafranca">github.com/mediafranca</a>. Para conversar sobre la iniciativa, sumarte como socio o proponer un proyecto para custodia, escribe a <a href="mailto:hola@mediafranca.net">hola@mediafranca.net</a>.</span>
+        <span data-lang="en">Code and public discussion live at <a href="https://github.com/mediafranca">github.com/mediafranca</a>. To talk about the initiative, join as a partner or propose a project for stewardship, write to <a href="mailto:hola@mediafranca.net">hola@mediafranca.net</a>.</span>
+      </p>
+
+      <!-- ============ NOTAS AL PIE ============ -->
+      <section class="footnotes" aria-label="Notas al pie">
+        <h3>
+          <span data-lang="es" class="is-active">Notas</span><span data-lang="en">Notes</span>
+        </h3>
+        <ol>
+          <li id="fn1">
+            <span data-lang="es" class="is-active">Esta preocupación resuena con la encíclica <a href="https://www.vatican.va/content/leo-xiv/es/encyclicals/documents/20260515-magnifica-humanitas.html"><em>Magnifica Humanitas</em></a> de León XIV (2026), sobre la custodia de la persona en tiempos de inteligencia artificial: la técnica no es neutra —“asume el rostro de quien la concibe, la financia, la regula y la utiliza”— y no debe reducir a la persona a función, dato o rendimiento. MediaFranca no es una iniciativa confesional; recoge esa advertencia como parte de una conversación pública más amplia. <a href="#fnref1" aria-label="Volver al texto">↩</a></span>
+            <span data-lang="en">This concern resonates with León XIV's encyclical <a href="https://www.vatican.va/content/leo-xiv/es/encyclicals/documents/20260515-magnifica-humanitas.html"><em>Magnifica Humanitas</em></a> (2026), on the guardianship of the person in the age of artificial intelligence: technology is not neutral —it “takes on the face of those who conceive, fund, regulate and use it”— and must not reduce the person to function, data or performance. MediaFranca is not a faith-based initiative; it takes up that warning as part of a wider public conversation. <a href="#fnref1en" aria-label="Back to text">↩</a></span>
+          </li>
+          <li id="fn2">
+            <span data-lang="es" class="is-active">Ivan Illich, <em>La convivencialidad</em> (1973): marco de la convivencialidad y la soberanía tecnológica. <a href="#fnref2" aria-label="Volver al texto">↩</a></span>
+            <span data-lang="en">Ivan Illich, <em>Tools for Conviviality</em> (1973): the framework of conviviality and technological sovereignty. <a href="#fnref2en" aria-label="Back to text">↩</a></span>
+          </li>
+          <li id="fn3">
+            <span data-lang="es" class="is-active"><a href="https://www.bcn.cl/leychile/navegar?idNorma=1023143">Ley 20.500</a> sobre Asociaciones y Participación Ciudadana; artículos 548 y siguientes del Código Civil chileno. <a href="#fnref3" aria-label="Volver al texto">↩</a></span>
+            <span data-lang="en"><a href="https://www.bcn.cl/leychile/navegar?idNorma=1023143">Law 20,500</a> on Associations and Citizen Participation; articles 548 ff. of the Chilean Civil Code. <a href="#fnref3en" aria-label="Back to text">↩</a></span>
+          </li>
+          <li id="fn4">
+            <span data-lang="es" class="is-active">Nueve indicadores del <a href="https://github.com/DPGAlliance/dpg-standard">DPG Standard</a>: licencias abiertas, propiedad clara, independencia de plataforma, documentación, extracción de datos, privacidad, estándares, mejores prácticas y no hacer daño. <a href="#fnref4" aria-label="Volver al texto">↩</a></span>
+            <span data-lang="en">Nine indicators of the <a href="https://github.com/DPGAlliance/dpg-standard">DPG Standard</a>: open licensing, clear ownership, platform independence, documentation, data extraction, privacy, standards, best practices, and do no harm. <a href="#fnref4en" aria-label="Back to text">↩</a></span>
+          </li>
+          <li id="fn5">
+            <span data-lang="es" class="is-active">La idea de una técnica a escala humana, gobernada por quienes la usan, tiene una larga tradición en la filosofía de la técnica (de Illich a Mumford, entre otros) y en el <a href="https://herbertspencer.net/2025/manifiesto">Manifiesto para el Diseño de Interacción en un Tiempo que se Despliega</a> (2025). <a href="#fnref5" aria-label="Volver al texto">↩</a></span>
+            <span data-lang="en">The idea of technology at a human scale, governed by those who use it, has a long tradition in the philosophy of technology (from Illich to Mumford, among others) and in the <a href="https://herbertspencer.net/2025/manifiesto">Manifesto for Interaction Design in an Unfolding Time</a> (2025). <a href="#fnref5en" aria-label="Back to text">↩</a></span>
+          </li>
+        </ol>
+      </section>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <p>
+      <span data-lang="es" class="is-active">MediaFranca, sitio iniciado en 2026. Contenido bajo <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; código bajo <a href="https://opensource.org/license/mit">MIT</a>. Fuente en <a href="https://github.com/mediafranca/mediafranca.github.io">github.com/mediafranca</a>.</span>
+      <span data-lang="en">MediaFranca, site started in 2026. Content under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code under <a href="https://opensource.org/license/mit">MIT</a>. Source at <a href="https://github.com/mediafranca/mediafranca.github.io">github.com/mediafranca</a>.</span>
+    </p>
+    <p>
+      <span data-lang="es" class="is-active">Lenguaje de diseño: <a href="https://github.com/hspencer/stella-nova-gui">stella-nova-gui</a>.</span>
+      <span data-lang="en">Design language: <a href="https://github.com/hspencer/stella-nova-gui">stella-nova-gui</a>.</span>
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/constellation.js" defer></script>
+
+</body>
+</html>

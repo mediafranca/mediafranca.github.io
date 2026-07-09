@@ -42,9 +42,13 @@
 <header class="site-header">
   <div class="shell bar">
     <a class="brand" href="#top" aria-label="MediaFranca — inicio">
-      <img src="assets/logo/mf.svg" alt="MediaFranca" srcset="assets/logo/mf.svg 1x, assets/logo/mf.svg 2x">
-      
-    </a>
+      <!--
+        Isotipo: referencia el archivo assets/logo/mf.svg. En tema oscuro se
+        invierte por CSS (ver .brand .mark en site.css). Es decorativo
+        (alt=""): el nombre lo aportan el texto contiguo y el aria-label del
+        enlace, evitando que el lector de pantalla lo repita.
+      -->
+      <img class="mark" src="assets/logo/mf.svg" alt="" width="22" height="26">
       <span>MediaFranca</span>
     </a>
 
@@ -351,7 +355,7 @@
         <!-- Círculo 2 · lenguaje abierto -->
         <article class="project" style="--circle-color: var(--sn-circulo-2)">
           <div class="project-head">
-            <span class="project-name">con·§tel</span>
+            <span class="project-name">con§tel</span>
             <span class="circle-tag is-active" data-lang="es">Lenguaje</span><span class="circle-tag" data-lang="en">Language</span>
           </div>
           <p class="desc">

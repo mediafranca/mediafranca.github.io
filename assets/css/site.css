@@ -97,7 +97,27 @@ button:focus-visible {
   color: var(--sn-ink);
   text-decoration: none;
 }
-.brand .mark { display: block; }
+/*
+  Isotipo del header. Referencia assets/logo/mf.svg como <img>, conservando
+  el dibujo original (incluido el ojo). flex: none evita que la barra
+  flexible lo deforme.
+*/
+.brand .mark {
+  display: block;
+  flex: none;
+  width: 1.35rem;
+  height: 1.6rem;
+}
+/*
+  El logo es tinta oscura sobre transparente; en tema oscuro se invierte para
+  que se lea claro sobre el header. Se cubren las dos vías de activación del
+  tema, igual que en tokens.css: el conmutador manual (data-sn-theme="dark")
+  y la preferencia del sistema (a menos que el usuario haya forzado "light").
+*/
+:root[data-sn-theme="dark"] .brand .mark { filter: invert(1); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-sn-theme="light"]) .brand .mark { filter: invert(1); }
+}
 
 /* Navegación por anclas */
 .site-nav ul {

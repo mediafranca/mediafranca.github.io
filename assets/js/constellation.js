@@ -31,7 +31,7 @@
     { id: "mfsvg",   label: "mf-svg-schema",circle: 3, url: "https://github.com/mediafranca/mf-svg-schema" },
     { id: "nlu",     label: "nlu-schema",   circle: 3, url: "https://github.com/mediafranca/nlu-schema" },
     // Círculo 2 · lenguaje abierto
-    { id: "constel", label: "con·§tel",     circle: 2, url: "https://github.com/hspencer/constel" },
+    { id: "constel", label: "con§tel",       circle: 2, url: "https://github.com/hspencer/constel" },
     { id: "pix",     label: "partituras",   circle: 2, url: "https://github.com/mediafranca/pix" },
     { id: "lecto",   label: "lectografo",   circle: 2, url: "https://github.com/hspencer/lectografo" },
     // Círculo 1 · convivencialidad / soberanía

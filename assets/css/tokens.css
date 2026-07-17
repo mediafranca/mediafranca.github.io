@@ -1,249 +1,147 @@
-/*
-  tokens.css — Lenguaje de diseño de MediaFranca
+/* ===================================================================
+   Sistema de Diseño MediaFranca (SDMF)
+   Terminal de fósforo ámbar, monocroma. Un solo color extra: el jade
+   de los enlaces. La jerarquía la hacen el brillo y el aire, no el color.
+   =================================================================== */
 
-  Tokens portados desde stella-nova-gui (github.com/hspencer/stella-nova-gui),
-  el sistema de diseño de referencia. Se conserva el modelo de tres capas de
-  Material 3:
-
-    Capa 1 · Primitivos   --sn-[color]-[tono]   (paleta cruda, nunca se renombra)
-    Capa 2 · Semánticos   --sn-paper, --sn-ink  (roles del sistema; aquí vive el tema)
-    Capa 3 · Componente   --sn-btn-*, --sn-field-*
-
-  La metáfora es la "página de papel": una hoja cálida flotando sobre un
-  espacio de taller gris, con un acento carmesí (la "nova"). El tema se
-  conmuta en la capa semántica mediante [data-sn-theme="dark"]; por defecto
-  respeta la preferencia del sistema operativo.
-*/
-
+/* ---------------- Color ---------------- */
 :root {
-  /* ---- Capa 1 · Primitivos ------------------------------------------- */
+  color-scheme: dark;
 
-  /* Papel: neutros cálidos claros */
-  --sn-papel-50:  #fcfbf7;
-  --sn-papel-75:  #f4f2ed;
-  --sn-papel-100: #f3f0e7;
-  --sn-papel-200: #efece2;
-  --sn-papel-300: #ece7da;
-  --sn-papel-400: #e8e4da;
-  --sn-papel-500: #e7e1d3;
-  --sn-papel-600: #ddd6c7;
-  --sn-papel-700: #a39a86;
-  --sn-papel-800: #968c7c;
+  /* Rampa de fósforo ámbar (Hercules P3) */
+  --amber-50:#FFF4DE; --amber-100:#FFE6B8; --amber-200:#FFD489; --amber-300:#FFC24D;
+  --amber-400:#FFB000; --amber-500:#DB9200; --amber-600:#A86E00; --amber-700:#734B00;
+  --amber-800:#4A3000; --amber-900:#2A1B00;
 
-  /* Tinta: neutros cálidos oscuros */
-  --sn-tinta-300: #756d5d;
-  --sn-tinta-400: #6b6357;
-  --sn-tinta-500: #353123;
-  --sn-tinta-600: #2c2410;
-  --sn-tinta-650: #2a2719;
-  --sn-tinta-700: #262318;
-  --sn-tinta-750: #221f1a;
-  --sn-tinta-800: #1e1c15;
-  --sn-tinta-850: #1a0f0b;
-  --sn-tinta-900: #181610;
-  --sn-tinta-950: #141209;
+  --void:#000000;
 
-  /* Rojo: acento carmesí (nova) */
-  --sn-rojo-500: #ae2d13;
-  --sn-rojo-600: #b21e3e;
-  --sn-rojo-700: #962c08;
-  --sn-rojo-900: #612403;
+  /* Roles semánticos: la pantalla de fósforo */
+  --screen:#140D03;
+  --screen-deep:#0C0802;
+  --panel:#1C1206;
+  --panel-raised:#241809;
+  --ink:#F2CE86;
+  --ink-bright:#FFE6B8;
+  --ink-dim:#B07E30;
+  --ink-faint:#6E5220;
+  --signal:#FFB000;
+  --signal-soft:#FFC24D;
+  --line:rgba(255,176,0,.24);
+  --line-strong:rgba(255,176,0,.52);
+  --glow:255,176,0;
 
-  /* Acentos complementarios */
-  --sn-coral-300:  #c8a89a;
-  --sn-coral-400:  #ff6b7e;
-  --sn-rosa-300:   #e6acb7;
-  --sn-rosa-400:   #c98592;
-  --sn-azul-200:   #b3cef2;
-  --sn-azul-300:   #8fb4e8;
-  --sn-azul-600:   #1d416e;
-  --sn-malva-400:  #a99cae;
-  --sn-verde-400:  #6cc18a;
-  --sn-verde-500:  #2f6f43;
-  --sn-masking-300:#f7db7e;
-  --sn-masking-500:#d9a14b;
-  --sn-masking-700:#8a5a12;
-  --sn-masking-900:#5a4416;
-  --sn-blanco:     #ffffff;
-
-  /* ---- Capa 2 · Semánticos (tema claro por defecto) ------------------ */
-
-  --sn-field:       var(--sn-papel-75);
-  --sn-paper:       var(--sn-papel-50);
-  --sn-paper-edge:  var(--sn-papel-100);
-  --sn-sunk:        var(--sn-papel-200);
-
-  --sn-ink:         var(--sn-tinta-750);
-  --sn-ink-soft:    var(--sn-tinta-400);
-  --sn-ink-faint:   var(--sn-papel-800);
-  --sn-hairline:    var(--sn-papel-600);
-  --sn-hairline-soft: var(--sn-papel-500);
-
-  --sn-nova:        var(--sn-rojo-500);
-  --sn-nova-ink:    var(--sn-blanco);
-  --sn-nova-wash:   #f7e9e6;
-
-  --sn-link:         var(--sn-rojo-500);
-  --sn-link-hover:   var(--sn-rojo-700);
-  --sn-link-visited: var(--sn-rojo-900);
-
-  --sn-ok:      var(--sn-verde-500);
-  --sn-warn:    var(--sn-masking-700);
-  --sn-danger:  var(--sn-rojo-600);
-
-  /* Colores de círculo, usados por la constelación y las fichas.
-     Cada círculo de la misión anidada tiene su propio matiz. */
-  --sn-circulo-1: var(--sn-azul-600);   /* convivencialidad */
-  --sn-circulo-2: var(--sn-verde-500);  /* lenguaje abierto */
-  --sn-circulo-3: var(--sn-rojo-500);   /* accesibilidad cognitiva / CAA */
-  --sn-aliados:   var(--sn-tinta-400);  /* aliados institucionales */
-
-  /* ---- Tipografía ---------------------------------------------------- */
-
-  --sn-font-sans:  "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --sn-font-serif: "IBM Plex Serif", "Iowan Old Style", Palatino, Georgia, serif;
-  --sn-font-mono:  "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-
-  --sn-font-text:    var(--sn-font-sans);
-  --sn-font-display: var(--sn-font-serif);
-  --sn-font-quote:   var(--sn-font-serif);
-
-  --sn-font-scale: 1;
-  --sn-leading: 1.61;
-
-  /* Tamaños fluidos (clamp): escalan con el ancho de la ventana */
-  --sn-fs-xs:         clamp(.72rem, .70rem + .10vw, .78rem);
-  --sn-fs-sm:         clamp(.82rem, .79rem + .14vw, .90rem);
-  --sn-fs-base:       calc(clamp(1.04rem, 1rem + .18vw, 1.1rem) * var(--sn-font-scale));
-  --sn-fs-md:         calc(clamp(1.15rem, 1.1rem + .24vw, 1.28rem) * var(--sn-font-scale));
-  --sn-fs-lg:         calc(clamp(1.2rem, 1.12rem + .40vw, 1.42rem) * var(--sn-font-scale));
-  --sn-fs-xl:         calc(clamp(1.35rem, 1.22rem + .55vw, 1.62rem) * var(--sn-font-scale));
-  --sn-fs-display:    calc(clamp(1.5rem, 1.32rem + .85vw, 2rem) * var(--sn-font-scale));
-  --sn-fs-page-title: calc(clamp(1.85rem, 1.55rem + 1.3vw, 2.5rem) * var(--sn-font-scale));
-
-  /* ---- Espaciado (escala 1.5) --------------------------------------- */
-
-  --sn-s-1: .25rem;
-  --sn-s-2: .5rem;
-  --sn-s-3: .75rem;
-  --sn-s-4: 1rem;
-  --sn-s-5: 1.5rem;
-  --sn-s-6: 2.25rem;
-  --sn-s-7: 3.5rem;
-  --sn-s-8: 5.25rem;
-
-  /* ---- Dimensiones --------------------------------------------------- */
-
-  --sn-measure: 40rem;   /* medida de lectura cómoda */
-  --sn-shell:   82rem;   /* ancho máximo del contenedor */
-  --sn-header-h: 3.5rem;
-
-  /* ---- Radios -------------------------------------------------------- */
-
-  --sn-radius-s:     2px;
-  --sn-radius:       4px;
-  --sn-radius-l:     8px;
-  --sn-radius-paper: 3px;
-  --sn-radius-pill:  999px;
-
-  --sn-hair: 1px solid var(--sn-hairline);
-
-  /* ---- Sombras (elevación sutil, "papel que levita") ---------------- */
-
-  --sn-lift-paper: 0 1px 1px rgba(40, 33, 20, .03), 0 3px 8px rgba(40, 33, 20, .04);
-  --sn-lift:       0 1px 2px rgba(40, 33, 20, .05), 0 8px 24px rgba(40, 33, 20, .08);
-  --sn-lift-soft:  0 2px 8px rgba(40, 33, 20, .05);
-
-  /* ---- Movimiento ---------------------------------------------------- */
-
-  --sn-motion: 1;
-  --sn-dur-1: calc(120ms * var(--sn-motion));
-  --sn-dur-2: calc(220ms * var(--sn-motion));
-  --sn-dur-3: calc(420ms * var(--sn-motion));
-  --sn-ease: cubic-bezier(.22, 1, .36, 1);
-
-  --sn-z-header: 20;
-  --sn-z-skip:   60;
+  /* Único color extra: jade turquesa, reservado a los enlaces.
+     10.3:1 sobre --screen — mismo peso óptico que el ámbar, para que
+     lea como par y no como alarma. */
+  --jade:#2FD4B8;
+  --jade-bright:#5FE6D0;
+  --jade-glow:47,212,184;
 }
 
-/*
-  Tema oscuro. Se activa de dos maneras:
-    1. Automáticamente, si el sistema operativo lo prefiere (media query).
-    2. Explícitamente, si el usuario fija [data-sn-theme="dark"] en <html>.
-  Solo se redefine la capa semántica: los primitivos no cambian.
-*/
-@media (prefers-color-scheme: dark) {
-  :root:not([data-sn-theme="light"]) {
-    --sn-field:      var(--sn-tinta-950);
-    --sn-paper:      var(--sn-tinta-800);
-    --sn-paper-edge: var(--sn-tinta-700);
-    --sn-sunk:       var(--sn-tinta-900);
+/* ---------------- Tipografía ----------------
+   Monoespaciada. IBM Plex Mono para todo: Light (300) en display —el
+   "grito silencioso"— y 400/500/600 para UI.
 
-    --sn-ink:        var(--sn-papel-300);
-    --sn-ink-soft:   var(--sn-papel-700);
-    --sn-ink-faint:  var(--sn-tinta-300);
-    --sn-hairline:   var(--sn-tinta-500);
-    --sn-hairline-soft: var(--sn-tinta-650);
+   RETÍCULA DE LÍNEA BASE: --baseline = 8px. Toda altura de línea y todo
+   espacio vertical es múltiplo entero de esa unidad. Por eso las alturas
+   de línea se declaran en rem absolutos (no en razones): una razón produce
+   fracciones de píxel y rompe la retícula. */
+:root {
+  --font-display:"IBM Plex Mono", ui-monospace, "Fira Code", "SFMono-Regular", monospace;
+  --font-mono:"IBM Plex Mono", ui-monospace, "Fira Code", "SFMono-Regular", monospace;
+  --font-body:var(--font-mono);
 
-    --sn-nova:       var(--sn-coral-400);
-    --sn-nova-ink:   var(--sn-tinta-850);
-    --sn-nova-wash:  #2b1c1d;
+  --w-light:300; --w-regular:400; --w-medium:500; --w-semibold:600; --w-bold:700;
 
-    --sn-link:         var(--sn-coral-400);
-    --sn-link-hover:   var(--sn-rosa-300);
-    --sn-link-visited: var(--sn-coral-300);
+  --baseline:8px;
 
-    --sn-ok:     var(--sn-verde-400);
-    --sn-warn:   var(--sn-masking-500);
-    --sn-danger: var(--sn-coral-400);
+  /* Escala de texto. Cada tamaño tiene una altura de línea fija en la
+     retícula; el comentario indica cuántas unidades ocupa. */
+  --t-xs:0.6875rem;   /* 11 · lh 16 = 2u */
+  --t-sm:0.75rem;     /* 12 · lh 24 = 3u */
+  --t-base:0.875rem;  /* 14 · lh 24 = 3u */
+  --t-md:1rem;        /* 16 · lh 24 = 3u */
+  --t-lg:1.125rem;    /* 18 · lh 32 = 4u */
+  --t-xl:1.375rem;    /* 22 · lh 32 = 4u */
+  --t-2xl:1.875rem;   /* 30 · lh 40 = 5u */
+  --t-3xl:2.5rem;     /* 40 · lh 48 = 6u */
 
-    --sn-circulo-1: var(--sn-azul-300);
-    --sn-circulo-2: var(--sn-verde-400);
-    --sn-circulo-3: var(--sn-coral-400);
-    --sn-aliados:   var(--sn-papel-700);
+  /* Alturas de línea = múltiplos de la línea base */
+  --lh-2u:1rem;    /* 16 */
+  --lh-3u:1.5rem;  /* 24 */
+  --lh-4u:2rem;    /* 32 */
+  --lh-5u:2.5rem;  /* 40 */
+  --lh-6u:3rem;    /* 48 */
+  --lh-7u:3.5rem;  /* 56 */
+  --lh-10u:5rem;   /* 80 */
 
-    --sn-lift-paper: 0 1px 1px rgba(0,0,0,.25), 0 3px 10px rgba(0,0,0,.35);
-    --sn-lift:       0 1px 2px rgba(0,0,0,.35), 0 8px 22px rgba(0,0,0,.45), 0 24px 60px rgba(0,0,0,.4);
-    --sn-lift-soft:  0 2px 12px rgba(0,0,0,.4);
-  }
+  /* Tracking */
+  --track-tight:-0.02em; --track-normal:0; --track-wide:0.08em;
+  --track-wider:0.16em; --track-widest:0.32em;
 }
 
-/* Conmutación explícita a oscuro, gane o no la media query. */
-:root[data-sn-theme="dark"] {
-  --sn-field:      var(--sn-tinta-950);
-  --sn-paper:      var(--sn-tinta-800);
-  --sn-paper-edge: var(--sn-tinta-700);
-  --sn-sunk:       var(--sn-tinta-900);
+/* ---------------- Espaciado ----------------
+   Vertical: SÓLO múltiplos de 8 (la línea base). Los valores de 4, 12 y
+   20 existen para separaciones horizontales e inline, donde la retícula
+   no aplica; usarlos en vertical la rompe. */
+:root {
+  --space-0:0;
+  --space-1:4px;    /* sólo horizontal */
+  --space-2:8px;    /* 1u */
+  --space-3:12px;   /* sólo horizontal */
+  --space-4:16px;   /* 2u */
+  --space-5:20px;   /* sólo horizontal */
+  --space-6:24px;   /* 3u */
+  --space-8:32px;   /* 4u */
+  --space-10:40px;  /* 5u */
+  --space-12:48px;  /* 6u */
+  --space-16:64px;  /* 8u */
+  --space-20:80px;  /* 10u */
+  --space-24:96px;  /* 12u */
+  --space-32:128px; /* 16u */
+  --space-40:160px; /* 20u */
 
-  --sn-ink:        var(--sn-papel-300);
-  --sn-ink-soft:   var(--sn-papel-700);
-  --sn-ink-faint:  var(--sn-tinta-300);
-  --sn-hairline:   var(--sn-tinta-500);
-  --sn-hairline-soft: var(--sn-tinta-650);
-
-  --sn-nova:       var(--sn-coral-400);
-  --sn-nova-ink:   var(--sn-tinta-850);
-  --sn-nova-wash:  #2b1c1d;
-
-  --sn-link:         var(--sn-coral-400);
-  --sn-link-hover:   var(--sn-rosa-300);
-  --sn-link-visited: var(--sn-coral-300);
-
-  --sn-ok:     var(--sn-verde-400);
-  --sn-warn:   var(--sn-masking-500);
-  --sn-danger: var(--sn-coral-400);
-
-  --sn-circulo-1: var(--sn-azul-300);
-  --sn-circulo-2: var(--sn-verde-400);
-  --sn-circulo-3: var(--sn-coral-400);
-  --sn-aliados:   var(--sn-papel-700);
-
-  --sn-lift-paper: 0 1px 1px rgba(0,0,0,.25), 0 3px 10px rgba(0,0,0,.35);
-  --sn-lift:       0 1px 2px rgba(0,0,0,.35), 0 8px 22px rgba(0,0,0,.45), 0 24px 60px rgba(0,0,0,.4);
-  --sn-lift-soft:  0 2px 12px rgba(0,0,0,.4);
+  --container:1160px;
+  --container-wide:1360px;
+  --gutter:24px;
+  --section-y:var(--space-32);
 }
 
-/* Respeta la preferencia de movimiento reducido. */
+/* ---------------- Efectos ---------------- */
+:root {
+  /* Radios: terminal cuadrada */
+  --r-none:0; --r-sm:2px; --r-md:4px; --r-pill:999px;
+
+  /* Bordes */
+  --bw:1px; --bw-thick:2px;
+  --border:var(--bw) solid var(--line);
+  --border-strong:var(--bw) solid var(--line-strong);
+
+  /* Brillo de fósforo */
+  --glow-sm:0 0 4px rgba(var(--glow),.35);
+  --glow-md:0 0 2px rgba(var(--glow),.5), 0 0 12px rgba(var(--glow),.32);
+  --glow-lg:0 0 3px rgba(var(--glow),.6), 0 0 20px rgba(var(--glow),.42), 0 0 48px rgba(var(--glow),.22);
+  --text-glow:0 0 6px rgba(var(--glow),.4);
+  --text-glow-strong:0 0 2px rgba(var(--glow),.55), 0 0 16px rgba(var(--glow),.5);
+
+  /* Movimiento */
+  --dur-fast:120ms; --dur-base:200ms; --dur-slow:320ms;
+  --ease:cubic-bezier(.4,0,.2,1);
+  --transition:all var(--dur-base) var(--ease);
+
+  /* Textura CRT: sólo scanlines. La retícula de puntos se eliminó. */
+  --scanlines:repeating-linear-gradient(0deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 2px, rgba(0,0,0,.16) 3px, rgba(0,0,0,0) 4px);
+
+  /* z-index */
+  --z-base:0; --z-sticky:100; --z-overlay:200; --z-modal:300;
+}
+
+@keyframes crt-flicker {
+  0%,100%{opacity:1} 92%{opacity:1} 93%{opacity:.82} 94%{opacity:1} 97%{opacity:.9} 98%{opacity:1}
+}
+@keyframes cursor-blink { 0%,49%{opacity:1} 50%,100%{opacity:0} }
+@keyframes node-blink { 0%,100%{opacity:1} 50%{opacity:.55} }
+
 @media (prefers-reduced-motion: reduce) {
-  :root { --sn-motion: 0; }
+  *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; }
 }

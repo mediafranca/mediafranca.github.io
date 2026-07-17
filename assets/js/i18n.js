@@ -1,10 +1,10 @@
 /*
-  i18n.js — Conmutación de idioma (es-CL / en-GB), tema y navegación
+  i18n.js — Conmutación de idioma (es-CL / en-GB) y navegación
 
   El sitio es bilingüe mediante pares de <span data-lang="es|en">. Este
   módulo decide cuál idioma mostrar, permite conmutarlo, recuerda la
   elección y sincroniza el atributo lang de <html> para lectores de
-  pantalla. También gestiona el tema claro/oscuro y el menú móvil.
+  pantalla.
 
   Progresivo por diseño: sin JavaScript, el HTML ya trae el español visible.
 */
@@ -14,7 +14,6 @@
 
   var LANGS = ["es", "en"];
   var STORE_LANG = "mf.lang";
-  var STORE_THEME = "mf.theme";
 
   /* ---- Idioma ------------------------------------------------------- */
 
@@ -58,62 +57,13 @@
     return "es";
   }
 
-  /* ---- Tema (claro / oscuro) --------------------------------------- */
-
-  /*
-    Aplica el tema fijando data-sn-theme en <html>. El valor "auto" retira
-    el atributo para que mande la preferencia del sistema (media query en
-    tokens.css). Actualiza el rótulo accesible del botón.
-  */
-  function applyTheme(theme) {
-    if (theme === "dark" || theme === "light") {
-      document.documentElement.setAttribute("data-sn-theme", theme);
-    } else {
-      document.documentElement.removeAttribute("data-sn-theme");
-      theme = "auto";
-    }
-    try { localStorage.setItem(STORE_THEME, theme); } catch (e) {}
-    var toggle = document.querySelector(".theme-toggle button");
-    if (toggle) {
-      var isDark = document.documentElement.getAttribute("data-sn-theme") === "dark";
-      toggle.setAttribute("aria-pressed", isDark ? "true" : "false");
-    }
-  }
-
-  /*
-    Alterna entre claro y oscuro tomando como base lo que se ve ahora
-    (incluida la preferencia del sistema cuando el tema está en "auto").
-  */
-  function toggleTheme() {
-    var current = document.documentElement.getAttribute("data-sn-theme");
-    var systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    var showingDark = current === "dark" || (!current && systemDark);
-    applyTheme(showingDark ? "light" : "dark");
-  }
-
   /* ---- Navegación por anclas --------------------------------------- */
 
   /*
     Resalta en la barra el enlace de la sección visible usando
-    IntersectionObserver, y cierra el menú móvil al elegir un destino.
+    IntersectionObserver.
   */
   function initNav() {
-    var nav = document.querySelector(".site-nav");
-    var toggle = document.querySelector(".nav-toggle");
-    if (toggle && nav) {
-      toggle.addEventListener("click", function () {
-        var open = nav.getAttribute("data-open") === "true";
-        nav.setAttribute("data-open", open ? "false" : "true");
-        toggle.setAttribute("aria-expanded", open ? "false" : "true");
-      });
-      nav.addEventListener("click", function (e) {
-        if (e.target.closest("a")) {
-          nav.setAttribute("data-open", "false");
-          toggle.setAttribute("aria-expanded", "false");
-        }
-      });
-    }
-
     var links = {};
     var linkEls = document.querySelectorAll('.site-nav a[href^="#"]');
     for (var i = 0; i < linkEls.length; i++) {
@@ -147,13 +97,6 @@
       });
     }
     applyLang(initialLang());
-
-    // Tema
-    var themeBtn = document.querySelector(".theme-toggle button");
-    if (themeBtn) themeBtn.addEventListener("click", toggleTheme);
-    var savedTheme = "auto";
-    try { savedTheme = localStorage.getItem(STORE_THEME) || "auto"; } catch (e) {}
-    applyTheme(savedTheme);
 
     // Navegación
     initNav();

@@ -63,6 +63,40 @@ python3 -m http.server 8000
 
 Abrir `http://localhost:8000`. También puede abrirse `index.html` directamente en el navegador; las fuentes se cargan por CDN.
 
+### Acceso desde otros dispositivos con Tailscale
+
+Para probar el sitio desde otro equipo de la misma *tailnet* (por ejemplo, un
+teléfono), instalar [Tailscale](https://tailscale.com/download), iniciar sesión y
+mantener el servidor local anterior en ejecución. En otra terminal:
+
+```bash
+tailscale serve --bg 8000
+tailscale serve status
+```
+
+`tailscale serve status` muestra la URL HTTPS privada. Solo los dispositivos
+autorizados en la misma *tailnet* pueden abrirla. Al terminar:
+
+```bash
+tailscale serve reset
+```
+
+### Vista previa pública temporal con Cloudflare Tunnel
+
+Para compartir una revisión sin publicar en GitHub Pages, instalar
+[`cloudflared`](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/)
+y, con el servidor local ejecutándose en el puerto 8000, abrir un túnel rápido:
+
+```bash
+cloudflared tunnel --url http://localhost:8000
+```
+
+El comando entrega una URL temporal `https://….trycloudflare.com`; debe mantenerse
+en ejecución mientras se usa y se cierra con `Ctrl+C`. Es una dirección pública:
+no debe usarse para contenido privado ni como despliegue permanente. Para una
+URL estable y controles de acceso corresponde configurar un túnel administrado
+en Cloudflare Zero Trust.
+
 ## Despliegue en GitHub Pages
 
 1. Crear el repositorio `mediafranca/mediafranca.github.io` y empujar `main`.

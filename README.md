@@ -4,6 +4,11 @@ Sitio público de [mediafranca.net](https://mediafranca.net/).
 
 MediaFranca es una iniciativa que busca socios fundadores para constituir, a futuro, una corporación de derecho privado sin fines de lucro en Valparaíso, Chile. Custodiará tecnologías convivenciales para la comunicación humana: software, estándares, esquemas y contenidos de lenguaje abierto.[^1]
 
+El puño alzado expresa su postura de soberanía tecnológica: las herramientas
+deben amplificar la agencia de las personas y permanecer bajo el gobierno de las
+comunidades que las habitan. El activo vive en `assets/logo/raised-fist.svg` y
+se acredita en el propio sitio.
+
 El sitio está escrito deliberadamente en tiempo futuro: describe lo que MediaFranca será, no lo que ya es. Sirve para explicar la filosofía del proyecto a amigos, colaboradores y potenciales socios.
 
 ## Filosofía técnica del sitio

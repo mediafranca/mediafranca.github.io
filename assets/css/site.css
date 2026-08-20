@@ -19,9 +19,6 @@ body {
   font-weight: var(--w-regular);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  background-image: var(--grid-dot);
-  background-size: var(--grid-size);
-  animation: crt-flicker 8s var(--ease) infinite;
   overflow-x: hidden;
 }
 
@@ -40,14 +37,7 @@ a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 ::-webkit-scrollbar-thumb { background: var(--line-strong); border: 3px solid var(--screen-deep); }
 
 /* ---- Superposiciones CRT (scanlines + viñeta) ---- */
-.crt-scanlines {
-  position: fixed; inset: 0; pointer-events: none; z-index: var(--z-overlay);
-  background: var(--scanlines); opacity: .28; mix-blend-mode: overlay;
-}
-.crt-vignette {
-  position: fixed; inset: 0; pointer-events: none; z-index: 199;
-  background: radial-gradient(ellipse at 50% 40%, transparent 52%, rgba(0,0,0,.55) 100%);
-}
+.crt-scanlines, .crt-vignette { display: none; }
 
 /* ---- Accesibilidad ---- */
 .skip-link {
@@ -79,7 +69,6 @@ a:hover { color: var(--accent); border-bottom-color: var(--accent); }
   width: 24px; height: 28px; display: block; background: var(--signal);
   -webkit-mask: url(../logo/mf.svg) center/contain no-repeat;
   mask: url(../logo/mf.svg) center/contain no-repeat;
-  filter: drop-shadow(0 0 6px rgba(var(--glow),.55));
 }
 .brand .name { font-size: var(--t-md); font-weight: var(--w-semibold); color: var(--ink-bright); letter-spacing: .01em; }
 .brand .tld { color: var(--ink-faint); font-weight: var(--w-regular); }
@@ -117,13 +106,13 @@ section[id] { padding: var(--space-24) var(--space-6); border-top: 1px solid var
 
 h2.headline {
   font-family: var(--font-display); font-weight: var(--w-light);
-  font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1.08;
+  font-size: var(--t-3xl); line-height: var(--lh-6u);
   color: var(--ink-bright); text-shadow: var(--text-glow);
   letter-spacing: -.02em; margin: 0; max-width: 24ch;
 }
 
 .body-copy { font-size: var(--t-md); line-height: var(--lh-normal); color: var(--ink); max-width: 60ch; margin: 0 0 var(--space-5); }
-.lede { font-size: var(--t-lg); line-height: var(--lh-snug); color: var(--ink-bright); margin: 0; }
+.lede { font-size: var(--t-lg); line-height: var(--lh-4u); color: var(--ink-bright); margin: 0; }
 
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10); }
 
@@ -149,7 +138,7 @@ h2.headline {
 
 .hero-title {
   font-family: var(--font-display); font-weight: var(--w-light);
-  font-size: clamp(3rem, 6.4vw, 5.4rem); line-height: .98;
+  font-size: var(--t-5xl); line-height: var(--lh-10u);
   color: var(--ink-bright); text-shadow: var(--text-glow-strong);
   margin: 0 0 var(--space-5); letter-spacing: -.035em;
 }
@@ -205,7 +194,6 @@ h2.headline {
   width: 60px; height: 70px; background: var(--signal);
   -webkit-mask: url(../logo/mf.svg) center/contain no-repeat;
   mask: url(../logo/mf.svg) center/contain no-repeat;
-  filter: drop-shadow(0 0 12px rgba(var(--glow),.6));
 }
 .graph-node {
   position: absolute; transform: translate(-50%,-50%);
@@ -217,13 +205,14 @@ h2.headline {
 .graph-node .pip {
   width: 14px; height: 14px; border-radius: 50%;
   border: 2px solid var(--node-color, var(--signal));
-  background: var(--screen); box-shadow: 0 0 9px var(--node-color, var(--signal));
+  background: var(--screen);
 }
 .graph-node .tag { font-size: var(--t-xs); color: var(--ink); white-space: nowrap; letter-spacing: .02em; }
 
 /* =================== MISIÓN: círculos anidados =================== */
 .nested-title {
-  font-family: var(--font-display); font-weight: var(--w-light); font-size: 1.7rem;
+  font-family: var(--font-display); font-weight: var(--w-light);
+  font-size: var(--t-2xl); line-height: var(--lh-5u);
   letter-spacing: -.02em; color: var(--ink-bright); margin: 0 0 var(--space-3);
   text-shadow: var(--text-glow);
 }
@@ -234,19 +223,15 @@ h2.headline {
 .circles-diagram { position: relative; width: 380px; height: 380px; margin: 0 auto; }
 .circles-diagram .ring-1 {
   position: absolute; inset: 0; border-radius: 50%;
-  border: 1px solid var(--tag-soberania);
-  box-shadow: 0 0 24px rgba(255,176,0,.12), inset 0 0 40px rgba(255,176,0,.05);
+  border: 1px solid var(--line-strong);
 }
 .circles-diagram .ring-2 {
   position: absolute; inset: 70px; border-radius: 50%;
-  border: 1px solid var(--tag-lenguaje);
-  box-shadow: 0 0 24px rgba(51,240,255,.14), inset 0 0 30px rgba(51,240,255,.05);
+  border: 1px solid var(--line-strong);
 }
 .circles-diagram .ring-3 {
   position: absolute; inset: 130px; border-radius: 50%;
-  border: 1px solid var(--tag-caa);
-  background: radial-gradient(circle, rgba(255,79,216,.10), transparent 70%);
-  box-shadow: 0 0 28px rgba(255,79,216,.18);
+  border: 1px solid var(--line-strong);
 }
 .circles-diagram .n { position: absolute; left: 50%; transform: translateX(-50%); font-size: var(--t-xs); letter-spacing: .14em; }
 .circles-diagram .n-1 { top: 8px; color: var(--tag-soberania); }
@@ -258,7 +243,6 @@ h2.headline {
 .circle-item .n {
   font-family: var(--font-display); font-weight: var(--w-light); font-size: 1.6rem;
   line-height: 1; color: var(--circle-color, var(--signal));
-  text-shadow: 0 0 10px var(--circle-color, var(--signal));
 }
 .circle-item .c-title { font-size: var(--t-md); color: var(--ink-bright); font-weight: var(--w-medium); margin-bottom: 4px; }
 .circle-item .c-desc { font-size: var(--t-sm); color: var(--ink-dim); line-height: var(--lh-snug); }
@@ -289,7 +273,7 @@ h2.headline {
 }
 .principles .p-title {
   display: block; font-size: var(--t-md); color: var(--ink-bright);
-  font-weight: var(--w-medium); margin-bottom: var(--space-3); line-height: var(--lh-tight);
+  font-weight: var(--w-medium); margin-bottom: var(--space-3); line-height: var(--lh-normal);
 }
 .principles .p-body { display: block; font-size: var(--t-sm); color: var(--ink-dim); line-height: var(--lh-snug); }
 
@@ -329,13 +313,13 @@ h2.headline {
 .contact { text-align: center; }
 .contact-head {
   font-family: var(--font-display); font-weight: var(--w-light);
-  font-size: clamp(2.4rem, 5.4vw, 4rem); line-height: 1.02; letter-spacing: -.03em;
+  font-size: var(--t-4xl); line-height: var(--lh-8u); letter-spacing: -.03em;
   color: var(--ink-bright); text-shadow: var(--text-glow-strong); margin: 0 0 var(--space-6);
 }
 .contact .body-copy { margin-left: auto; margin-right: auto; max-width: 54ch; margin-bottom: var(--space-8); }
 .contact-mail {
   font-family: var(--font-display); font-weight: var(--w-light);
-  font-size: clamp(1.5rem, 3.4vw, 2.4rem); letter-spacing: -.02em;
+  font-size: var(--t-2xl); letter-spacing: -.02em;
   color: var(--signal); text-shadow: var(--text-glow);
   border-bottom: 1px solid var(--line-strong);
 }
@@ -359,7 +343,6 @@ h2.headline {
   width: 22px; height: 26px; display: block; background: var(--signal);
   -webkit-mask: url(../logo/mf.svg) center/contain no-repeat;
   mask: url(../logo/mf.svg) center/contain no-repeat;
-  filter: drop-shadow(0 0 5px rgba(var(--glow),.5));
 }
 .footer-brand .name { font-size: var(--t-md); font-weight: var(--w-semibold); color: var(--ink-bright); }
 .footer-tagline { font-size: var(--t-sm); color: var(--ink-dim); max-width: 40ch; margin: 0 0 var(--space-3); line-height: var(--lh-snug); }
@@ -375,10 +358,25 @@ h2.headline {
 .footer-col .sd { margin-top: var(--space-3); color: var(--ink-dim); }
 .footer-col .sd strong { color: var(--signal); font-weight: var(--w-regular); }
 
+/* =================== VERA (proyecto destacado) =================== */
+.project.featured {
+  grid-column: 1 / -1; flex-direction: row; gap: var(--space-10);
+  border-color: var(--line-strong); padding: var(--space-8);
+}
+.featured-meta { flex: none; width: 196px; }
+.featured-badge {
+  display: inline-block; margin-top: var(--space-4);
+  font-size: var(--t-xs); text-transform: uppercase; letter-spacing: .16em;
+  color: var(--signal); border: 1px solid var(--line-strong); padding: 2px 6px;
+}
+.featured-body { flex: 1; display: flex; flex-direction: column; gap: var(--space-4); }
+.project.featured .desc { font-size: var(--t-base); max-width: 72ch; color: var(--ink); }
+
 /* =================== RESPONSIVO =================== */
 @media (max-width: 1100px) {
   .hero-grid { grid-template-columns: 1fr; }
   .graph-stage { transform: translateX(-50%) scale(.85); transform-origin: top center; }
+  .hero-title { font-size: var(--t-4xl); line-height: var(--lh-8u); }
 }
 
 @media (max-width: 900px) {
@@ -403,4 +401,8 @@ h2.headline {
   .circles-diagram .ring-3 { inset: 102px; }
   .circles-diagram .n-2 { top: 62px; }
   .spec-row { grid-template-columns: 1fr; gap: var(--space-1); }
+  .hero-title { font-size: var(--t-3xl); line-height: var(--lh-6u); }
+  h2.headline, .contact-head { font-size: var(--t-2xl); line-height: var(--lh-5u); }
+  .project.featured { flex-direction: column; }
+  .featured-meta { width: auto; }
 }

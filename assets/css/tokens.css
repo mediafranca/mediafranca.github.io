@@ -6,36 +6,43 @@
 
 /* ---------------- Color ---------------- */
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 
-  /* Rampa de fósforo ámbar (Hercules P3) */
+  /* Rampa ámbar (referencia de tono, sin uso decorativo) */
   --amber-50:#FFF4DE; --amber-100:#FFE6B8; --amber-200:#FFD489; --amber-300:#FFC24D;
   --amber-400:#FFB000; --amber-500:#DB9200; --amber-600:#A86E00; --amber-700:#734B00;
   --amber-800:#4A3000; --amber-900:#2A1B00;
 
   --void:#000000;
 
-  /* Roles semánticos: la pantalla de fósforo */
-  --screen:#140D03;
-  --screen-deep:#0C0802;
-  --panel:#1C1206;
-  --panel-raised:#241809;
-  --ink:#F2CE86;
-  --ink-bright:#FFE6B8;
-  --ink-dim:#B07E30;
-  --ink-faint:#6E5220;
-  --signal:#FFB000;
-  --signal-soft:#FFC24D;
-  --line:rgba(255,176,0,.24);
-  --line-strong:rgba(255,176,0,.52);
-  --glow:255,176,0;
+  /* Roles semánticos: papel cálido, tinta oscura */
+  --screen:#F6F4EF;
+  --screen-deep:#EDE9E2;
+  --panel:#E5E1DA;
+  --panel-raised:#DBD7CF;
+  --ink:#1C1A15;
+  --ink-bright:#0D0C09;
+  --ink-dim:#5C5649;
+  --ink-faint:#998F82;
+  --signal:#9A6800;
+  --signal-soft:#B07A00;
+  --line:rgba(0,0,0,.1);
+  --line-strong:rgba(0,0,0,.2);
+  --glow:0,0,0;
 
-  /* Único color extra: jade turquesa, reservado a los enlaces.
-     10.3:1 sobre --screen — mismo peso óptico que el ámbar, para que
-     lea como par y no como alarma. */
-  --jade:#2FD4B8;
-  --jade-bright:#5FE6D0;
-  --jade-glow:47,212,184;
+  /* Un solo acento: ámbar. Sin color extra. */
+  --jade:var(--signal);
+  --jade-bright:var(--signal-soft);
+  --jade-glow:154,104,0;
+
+  /* Acento hover */
+  --accent:#6B4700;
+  --accent-2:var(--signal-soft);
+
+  /* Tags: neutros — el diseño no usa colores de categoría */
+  --tag-caa:var(--ink-dim);
+  --tag-lenguaje:var(--ink-dim);
+  --tag-soberania:var(--ink-dim);
 }
 
 /* ---------------- Tipografía ----------------
@@ -78,6 +85,16 @@
   /* Tracking */
   --track-tight:-0.02em; --track-normal:0; --track-wide:0.08em;
   --track-wider:0.16em; --track-widest:0.32em;
+
+  /* Escala display extendida */
+  --t-4xl:3.5rem;  /* 56 · lh 64 = 8u */
+  --t-5xl:4.5rem;  /* 72 · lh 80 = 10u */
+  --lh-8u:4rem;    /* 64px */
+
+  /* Aliases de ritmo vertical — siempre múltiplos de 8px */
+  --lh-tight:var(--lh-2u);   /* 16px = 2u, titulares display de una línea */
+  --lh-snug:var(--lh-3u);    /* 24px = 3u, texto corriente */
+  --lh-normal:var(--lh-3u);  /* 24px = 3u, alias semántico */
 }
 
 /* ---------------- Espaciado ----------------
@@ -117,12 +134,12 @@
   --border:var(--bw) solid var(--line);
   --border-strong:var(--bw) solid var(--line-strong);
 
-  /* Brillo de fósforo */
-  --glow-sm:0 0 4px rgba(var(--glow),.35);
-  --glow-md:0 0 2px rgba(var(--glow),.5), 0 0 12px rgba(var(--glow),.32);
-  --glow-lg:0 0 3px rgba(var(--glow),.6), 0 0 20px rgba(var(--glow),.42), 0 0 48px rgba(var(--glow),.22);
-  --text-glow:0 0 6px rgba(var(--glow),.4);
-  --text-glow-strong:0 0 2px rgba(var(--glow),.55), 0 0 16px rgba(var(--glow),.5);
+  /* Sin fulgores */
+  --glow-sm:none;
+  --glow-md:none;
+  --glow-lg:none;
+  --text-glow:none;
+  --text-glow-strong:none;
 
   /* Movimiento */
   --dur-fast:120ms; --dur-base:200ms; --dur-slow:320ms;
@@ -130,10 +147,14 @@
   --transition:all var(--dur-base) var(--ease);
 
   /* Textura CRT: sólo scanlines. La retícula de puntos se eliminó. */
-  --scanlines:repeating-linear-gradient(0deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 2px, rgba(0,0,0,.16) 3px, rgba(0,0,0,0) 4px);
+  --scanlines:none;
 
   /* z-index */
   --z-base:0; --z-sticky:100; --z-overlay:200; --z-modal:300;
+
+  /* Textura de fondo (desactivada; reservada para activación futura) */
+  --grid-dot:none;
+  --grid-size:8px;
 }
 
 @keyframes crt-flicker {

@@ -318,7 +318,7 @@ h2.headline {
 
 /* =================== NOTAS AL PIE =================== */
 .footnote-ref a { border-bottom: none; font-size: .72em; }
-.footnotes { margin-top: var(--space-16); border-top: 1px solid var(--line); padding-top: var(--space-8); text-align: left; }
+.footnotes { margin: var(--space-16); border-top: 1px solid var(--line); padding-top: var(--space-8); text-align: left; }
 .footnotes h3 {
   font-size: var(--t-xs); text-transform: uppercase; letter-spacing: var(--track-wider);
   color: var(--ink-faint); font-weight: var(--w-medium); margin: 0 0 var(--space-4);

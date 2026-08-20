@@ -146,20 +146,10 @@
   --ease:cubic-bezier(.4,0,.2,1);
   --transition:all var(--dur-base) var(--ease);
 
-  /* Textura CRT: sólo scanlines. La retícula de puntos se eliminó. */
-  --scanlines:none;
-
   /* z-index */
   --z-base:0; --z-sticky:100; --z-overlay:200; --z-modal:300;
-
-  /* Textura de fondo (desactivada; reservada para activación futura) */
-  --grid-dot:none;
-  --grid-size:8px;
 }
 
-@keyframes crt-flicker {
-  0%,100%{opacity:1} 92%{opacity:1} 93%{opacity:.82} 94%{opacity:1} 97%{opacity:.9} 98%{opacity:1}
-}
 @keyframes cursor-blink { 0%,49%{opacity:1} 50%,100%{opacity:0} }
 @keyframes node-blink { 0%,100%{opacity:1} 50%{opacity:.55} }
 

@@ -7,7 +7,7 @@
 
   <meta name="description" content="MediaFranca cuidará las herramientas del lenguaje abierto —pictogramas, textos, esquemas, grafos— para que amplíen a las personas en vez de reducirlas, y respondan ante quienes las usan. Una iniciativa en formación desde Valparaíso, Chile." />
   <meta name="author" content="MediaFranca (iniciativa en formación)" />
-  <meta name="theme-color" content="#140D03" />
+  <meta name="theme-color" content="#F6F4EF" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="MediaFranca" />
@@ -17,27 +17,19 @@
   <meta property="og:locale:alternate" content="en_GB" />
   <link rel="canonical" href="https://mediafranca.net/" />
 
-  <!--
-    Favicon en línea: una pequeña constelación sobre pantalla de fósforo
-    ámbar, coherente con el grafo de proyectos y el canal por defecto.
-  -->
-  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='8' fill='%23140D03'/><line x1='32' y1='32' x2='14' y2='18' stroke='%23FFB000' stroke-width='1' opacity='.4'/><line x1='32' y1='32' x2='50' y2='20' stroke='%23FFB000' stroke-width='1' opacity='.4'/><line x1='32' y1='32' x2='50' y2='48' stroke='%23FFB000' stroke-width='1' opacity='.4'/><line x1='32' y1='32' x2='14' y2='48' stroke='%23FFB000' stroke-width='1' opacity='.4'/><circle cx='14' cy='18' r='2.6' fill='%23FF4FD8'/><circle cx='50' cy='20' r='2.6' fill='%2333F0FF'/><circle cx='50' cy='48' r='2.6' fill='%2333F0FF'/><circle cx='14' cy='48' r='2.6' fill='%23FF4FD8'/><circle cx='32' cy='32' r='5' fill='%23FFB000'/></svg>" />
+  <link rel="icon" href="assets/logo/mf.svg" type="image/svg+xml" />
 
   <!-- IBM Plex Mono (OFL): toda la familia tipográfica del SDMF.
        Sustitución declarada: reemplazar por archivos autoalojados cuando existan. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/tokens.css" />
   <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 
 <body>
-
-<!-- Texturas CRT: scanlines y viñeta, puramente decorativas -->
-<div class="crt-scanlines" aria-hidden="true"></div>
-<div class="crt-vignette" aria-hidden="true"></div>
 
 <a class="skip-link" href="#contenido">
   <span data-lang="es" class="is-active">Saltar al contenido</span>
@@ -144,7 +136,7 @@
             <a class="graph-node" style="--node-color:var(--tag-lenguaje);left:152px;top:338px" href="https://github.com/mediafranca/lectografo" title="lectografo"><span class="pip" aria-hidden="true"></span><span class="tag">lectografo</span></a>
             <a class="graph-node" style="--node-color:var(--tag-soberania);left:75px;top:228px" href="https://github.com/mediafranca/lombardi" title="lombardi"><span class="pip" aria-hidden="true"></span><span class="tag">lombardi</span></a>
             <a class="graph-node" style="--node-color:var(--tag-soberania);left:185px;top:151px" href="https://github.com/mediafranca/filippo3d" title="filippo3d"><span class="pip" aria-hidden="true"></span><span class="tag">filippo3d</span></a>
-            <a class="graph-node" style="--node-color:var(--tag-soberania);left:139px;top:213px" href="https://github.com/mediafranca/vera" title="Vera"><span class="pip" aria-hidden="true"></span><span class="tag">Vera</span></a>
+            <a class="graph-node" style="--node-color:var(--tag-soberania);left:139px;top:213px" href="https://vera.mediafranca.net/vera/" title="Vera"><span class="pip" aria-hidden="true"></span><span class="tag">Vera</span></a>
           </div>
         </div>
         <div class="terminal-foot">
@@ -363,27 +355,33 @@
         <span data-lang="en">What already exists and MediaFranca will care for</span>
       </h2>
       <p class="body-copy" style="margin-top:var(--space-10)">
-        <span data-lang="es" class="is-active">Estos proyectos ya funcionan hoy, mantenidos por sus autores. MediaFranca los reunirá bajo una custodia común. La etiqueta indica el círculo de la misión al que pertenece cada uno. Lista no exhaustiva.</span>
-        <span data-lang="en">These projects already work today, maintained by their authors. MediaFranca will bring them under shared stewardship. The tag shows which circle of the mission each belongs to. Non-exhaustive list.</span>
+        <span data-lang="es" class="is-active">Estos proyectos ya funcionan hoy, mantenidos por sus autores. MediaFranca los reunirá bajo una custodia común. Es una lista abierta y no exhaustiva.</span>
+        <span data-lang="en">These projects already work today, maintained by their authors. MediaFranca will bring them under shared stewardship. This is an open, non-exhaustive list.</span>
       </p>
 
       <div class="projects-grid">
 
-        <article class="project">
-          <div class="project-head">
-            <span class="project-name">Vera</span>
+        <article class="project featured">
+          <div class="featured-meta">
+            <div class="project-head">
+              <span class="project-name">Vera</span>
+            </div>
+            <span class="featured-badge"><span data-lang="es" class="is-active">proyecto vivo</span><span data-lang="en">live project</span></span>
           </div>
-          <p class="desc">
-            <span data-lang="es" class="is-active">Memoria viva para personas y agentes de IA. Gestión de conocimiento local-first: trabaja a fondo con inteligencias artificiales sin ceder el control de lo que sabes.</span>
-            <span data-lang="en">Living memory for people and AI agents. Local-first knowledge management: work deeply with AI without surrendering control of what you know.</span>
-          </p>
-          <div class="links">
-            <a class="repo" href="https://github.com/mediafranca/vera">repo ↗</a>
+          <div class="featured-body">
+            <p class="desc">
+              <span data-lang="es" class="is-active">Memoria viva para personas y agentes de IA. Permite trabajar a fondo con inteligencias artificiales sin ceder el control del conocimiento, su historia ni sus relaciones.</span>
+              <span data-lang="en">Living memory for people and AI agents. It enables sustained work with artificial intelligence without surrendering control of knowledge, its history or its relationships.</span>
+            </p>
+            <div class="links">
+              <a href="https://vera.mediafranca.net/vera/"><span data-lang="es" class="is-active">conocer Vera ↗</span><span data-lang="en">discover Vera ↗</span></a>
+              <a class="repo" href="https://github.com/mediafranca/vera">repo ↗</a>
+            </div>
           </div>
         </article>
 
         <!-- Círculo 3 · CAA -->
-        <article class="project" style="--circle-color:var(--tag-caa)">
+        <article class="project">
           <div class="project-head">
             <span class="project-name">pictos.net</span>
           </div>
@@ -397,7 +395,7 @@
           </div>
         </article>
 
-        <article class="project" style="--circle-color:var(--tag-caa)">
+        <article class="project">
           <div class="project-head">
             <span class="project-name">ICAP</span>
           </div>
@@ -410,7 +408,7 @@
           </div>
         </article>
 
-        <article class="project" style="--circle-color:var(--tag-caa)">
+        <article class="project">
           <div class="project-head">
             <span class="project-name">mf-svg-schema</span>
           </div>
@@ -423,7 +421,7 @@
           </div>
         </article>
 
-        <article class="project" style="--circle-color:var(--tag-caa)">
+        <article class="project">
           <div class="project-head">
             <span class="project-name">nlu-schema</span>
           </div>
@@ -437,7 +435,7 @@
         </article>
 
         <!-- Círculo 2 · lenguaje abierto -->
-        <article class="project" style="--circle-color:var(--tag-lenguaje)">
+        <article class="project">
           <div class="project-head">
             <span class="project-name">con§tel</span>
           </div>
@@ -450,7 +448,7 @@
           </div>
         </article>
 
-        <article class="project" style="--circle-color:var(--tag-lenguaje)">
+        <article class="project">
           <div class="project-head">
             <span class="project-name">lectografo</span>
           </div>
@@ -464,7 +462,7 @@
         </article>
 
         <!-- Círculo 1 · convivencialidad / soberanía -->
-        <article class="project" style="--circle-color:var(--tag-soberania)">
+        <article class="project">
           <div class="project-head">
             <span class="project-name">lombardi</span>
           </div>
@@ -477,7 +475,7 @@
           </div>
         </article>
 
-        <article class="project" style="--circle-color:var(--tag-soberania)">
+        <article class="project">
           <div class="project-head">
             <span class="project-name">filippo3d</span>
           </div>

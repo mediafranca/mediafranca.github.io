@@ -36,9 +36,6 @@ a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 ::-webkit-scrollbar-track { background: var(--screen-deep); }
 ::-webkit-scrollbar-thumb { background: var(--line-strong); border: 3px solid var(--screen-deep); }
 
-/* ---- Superposiciones CRT (scanlines + viñeta) ---- */
-.crt-scanlines, .crt-vignette { display: none; }
-
 /* ---- Accesibilidad ---- */
 .skip-link {
   position: absolute; left: -9999px; top: 0; z-index: var(--z-modal);
@@ -254,10 +251,9 @@ h2.headline {
 }
 .sovereignty-posture img {
   display: block; width: 92px; height: auto;
-  filter: invert(82%) sepia(80%) saturate(2216%) hue-rotate(351deg) brightness(104%) contrast(103%);
 }
 .sovereignty-posture figcaption { display: grid; gap: var(--space-2); color: var(--ink); line-height: var(--lh-snug); }
-.sovereignty-posture strong { color: var(--tag-soberania); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: var(--track-wide); }
+.sovereignty-posture strong { color: var(--signal); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: var(--track-wide); }
 
 .principles {
   display: grid; grid-template-columns: repeat(3,1fr); gap: 1px;
@@ -287,11 +283,6 @@ h2.headline {
 .project:hover { border-color: var(--signal); box-shadow: var(--glow-sm); }
 .project-head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); }
 .project-name { font-size: var(--t-md); color: var(--ink-bright); font-weight: var(--w-semibold); }
-.circle-tag {
-  font-size: var(--t-xs); text-transform: uppercase; letter-spacing: .12em;
-  color: var(--circle-color, var(--signal));
-  border-bottom: 2px solid var(--circle-color, var(--signal)); padding-bottom: 2px;
-}
 .project .desc { font-size: var(--t-sm); color: var(--ink-dim); line-height: var(--lh-snug); margin: 0; flex: 1; }
 .project .links { display: flex; gap: var(--space-4); font-size: var(--t-xs); letter-spacing: .04em; }
 .project .links a { color: var(--signal); border-bottom: 1px solid var(--line-strong); }

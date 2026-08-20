@@ -13,14 +13,14 @@ El sitio está escrito deliberadamente en tiempo futuro: describe lo que MediaFr
 
 ## Filosofía técnica del sitio
 
-El sitio encarna los mismos principios que enuncia. Por eso es lo más simple y auditable posible: HTML, CSS y JavaScript estáticos, sin framework, sin build, sin trackers y sin dependencias de ejecución externas. La constelación de proyectos se dibuja en canvas nativo, no con una librería CDN, para no depender de terceros ni obligar a auditar código ajeno.[^2]
+El sitio encarna los mismos principios que enuncia. Por eso es lo más simple y auditable posible: HTML, CSS y JavaScript estáticos, sin framework, sin build y sin trackers. La constelación de proyectos es SVG y HTML legible, no una visualización generada por una librería. La única dependencia de ejecución externa es IBM Plex Mono, servida por Google Fonts mientras no se aloje localmente.[^2]
 
 ```mermaid
 graph TD
-    A[index.html<br/>una sola página, navegación por anclas] --> B[assets/css/tokens.css<br/>tokens de stella-nova-gui]
+    A[index.html<br/>una sola página, navegación por anclas] --> B[assets/css/tokens.css<br/>tokens del SDMF]
     A --> C[assets/css/site.css<br/>layout, componentes, accesibilidad]
-    A --> D[assets/js/i18n.js<br/>idioma es-CL / en-GB, tema, navegación]
-    A --> E[assets/js/constellation.js<br/>grafo de proyectos en canvas nativo]
+    A --> D[assets/js/i18n.js<br/>idioma es-CL / en-GB y navegación]
+    A --> E[assets/logo/<br/>marca y emblema de soberanía]
 ```
 
 ## Estructura del repositorio
@@ -30,11 +30,13 @@ mediafranca.github.io/
 ├── index.html              Página única, bilingüe, con las secciones del sitio
 ├── assets/
 │   ├── css/
-│   │   ├── tokens.css      Tokens de diseño (portados de stella-nova-gui)
+│   │   ├── tokens.css      Tokens del Sistema de Diseño MediaFranca
 │   │   └── site.css        Estilos de layout, componentes y accesibilidad
-│   └── js/
-│       ├── i18n.js         Conmutación de idioma, tema y navegación por anclas
-│       └── constellation.js  Grafo de proyectos (canvas 2D, sin librerías)
+│   ├── js/
+│   │   └── i18n.js         Conmutación de idioma y navegación por anclas
+│   └── logo/
+│       ├── mf.svg          Marca de MediaFranca
+│       └── raised-fist.svg Emblema de soberanía tecnológica
 ├── CNAME                   Dominio para GitHub Pages (mediafranca.net)
 ├── .nojekyll               Desactiva el procesado Jekyll en GitHub Pages
 ├── robots.txt
@@ -51,11 +53,11 @@ El comportamiento es progresivo: sin JavaScript, el HTML muestra el español por
 
 ## Lenguaje de diseño
 
-Los tokens provienen de [stella-nova-gui](https://github.com/hspencer/stella-nova-gui): metáfora de "página de papel" sobre atelier gris, acento carmesí (la *nova*), tipografía IBM Plex y modelo de color en tres capas (primitivos, semánticos, componente). El tema claro/oscuro respeta la preferencia del sistema y puede conmutarse manualmente.
+El Sistema de Diseño MediaFranca (SDMF) usa una página de papel cálido, tinta oscura, un único acento ámbar e IBM Plex Mono. Los tokens separan color, tipografía, ritmo, espaciado y movimiento de los componentes que los consumen. El sitio tiene deliberadamente un solo tema claro.
 
 ## Accesibilidad
 
-Objetivo WCAG 2.1 AA: enlace de salto al contenido, foco visible, navegación operable por teclado, contraste suficiente en ambos temas, imágenes y controles rotulados, respeto a `prefers-reduced-motion` (la constelación se asienta sin animar) y a `prefers-color-scheme`.
+Objetivo WCAG 2.1 AA: enlace de salto al contenido, foco visible, navegación operable por teclado, contraste suficiente, imágenes y controles rotulados y respeto a `prefers-reduced-motion`.
 
 ## Edición local
 
@@ -104,7 +106,7 @@ en Cloudflare Zero Trust.
 
 ## Despliegue en GitHub Pages
 
-1. Crear el repositorio `mediafranca/mediafranca.github.io` y empujar `main`.
+1. Empujar la rama `main` de `mediafranca/mediafranca.github.io`.
 2. En `Settings > Pages`: Source = `Deploy from a branch`, Branch = `main`, Folder = `/ (root)`.
 3. En `Custom domain` ingresar `mediafranca.net`. GitHub leerá el archivo `CNAME` y emitirá el certificado HTTPS.
 4. Activar `Enforce HTTPS`.
@@ -119,4 +121,4 @@ Contenido bajo [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); códig
 
 [^1]: La visión y misión canónicas viven en el grafo Logseq privado del custodio (`MediaFranca - Visión y Misión`). Este repositorio contiene solo el sitio público; los documentos de gobernanza (estatutos, plan operativo, modelo de fiscal host) no se versionan aquí.
 
-[^2]: El sitio de referencia previo usaba p5.js desde un CDN para la constelación. Esta versión la reescribe en canvas 2D puro para eliminar la dependencia externa, coherente con el principio de soberanía tecnológica.
+[^2]: El sitio de referencia previo usaba p5.js desde un CDN para la constelación. Esta versión conserva el grafo como SVG y HTML estáticos. Queda pendiente autoalojar IBM Plex Mono para eliminar también la dependencia de Google Fonts.

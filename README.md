@@ -42,6 +42,7 @@ mediafranca.github.io/
 ├── robots.txt
 ├── sitemap.xml
 ├── LICENSE                 Dual: MIT (código) y CC BY 4.0 (contenido)
+├── MANIFESTO.md            Manifiesto de MediaFranca
 └── README.md               Este archivo
 ```
 

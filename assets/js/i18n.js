@@ -74,10 +74,10 @@
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         var link = links[entry.target.id];
-        if (!link) return;
+        if (!link && entry.target.id !== "top") return;
         if (entry.isIntersecting) {
           for (var k in links) { if (links.hasOwnProperty(k)) links[k].removeAttribute("aria-current"); }
-          link.setAttribute("aria-current", "true");
+          if (link) link.setAttribute("aria-current", "location");
         }
       });
     }, { rootMargin: "-40% 0px -55% 0px" });

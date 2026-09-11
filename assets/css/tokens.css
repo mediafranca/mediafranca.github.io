@@ -1,7 +1,7 @@
 /* ===================================================================
    Sistema de Diseño MediaFranca (SDMF)
-   Terminal de fósforo ámbar, monocroma. Un solo color extra: el jade
-   de los enlaces. La jerarquía la hacen el brillo y el aire, no el color.
+   TUI clara: papel, tinta y acento ámbar. La jerarquía se expresa
+   mediante ritmo tipográfico, paneles y selección inversa.
    =================================================================== */
 
 /* ---------------- Color ---------------- */
@@ -26,8 +26,8 @@
   --ink-faint:#998F82;
   --signal:#522E00;
   --signal-soft:#B07A00;
-  --line:rgba(0,0,0,.1);
-  --line-strong:rgba(0,0,0,.2);
+  --line:#C4BEB3;
+  --line-strong:#8C8374;
   --glow:0,0,0;
 
   /* Un solo acento: ámbar. Sin color extra. */
@@ -119,7 +119,7 @@
   --space-40:160px; /* 20u */
 
   --container:1160px;
-  --container-wide:1360px;
+  --container-wide:1160px;
   --gutter:24px;
   --section-y:var(--space-32);
 }

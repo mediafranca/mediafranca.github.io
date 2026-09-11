@@ -2,7 +2,7 @@
 
 Sitio público de [mediafranca.net](https://mediafranca.net/).
 
-MediaFranca es una iniciativa que busca socios fundadores para constituir, a futuro, una corporación de derecho privado sin fines de lucro en Valparaíso, Chile. Custodiará tecnologías convivenciales para la comunicación humana: software, estándares, esquemas y contenidos de lenguaje abierto.[^1]
+MediaFranca es una iniciativa en formación desde Valparaíso, Chile. Invita a colaborar en proyectos, articular alianzas y construir su capacidad de cuidado y gobierno común. La figura jurídica permanece abierta; una corporación sin fines de lucro es una opción futura. Custodiará tecnologías convivenciales para la comunicación humana: software, estándares, esquemas y contenidos de lenguaje abierto.[^1]
 
 El puño alzado expresa su postura de soberanía tecnológica: las herramientas
 deben amplificar la agencia de las personas y permanecer bajo el gobierno de las
@@ -54,7 +54,9 @@ El comportamiento es progresivo: sin JavaScript, el HTML muestra el español por
 
 ## Lenguaje de diseño
 
-El Sistema de Diseño MediaFranca (SDMF) usa una página de papel cálido, tinta oscura, un único acento ámbar e IBM Plex Mono. Los tokens separan color, tipografía, ritmo, espaciado y movimiento de los componentes que los consumen. El sitio tiene deliberadamente un solo tema claro.
+El Sistema de Diseño MediaFranca (SDMF) usa una página de papel cálido, tinta oscura, un único acento ámbar e IBM Plex Mono. Los tokens separan color, tipografía, ritmo, espaciado y movimiento de los componentes que los consumen. El sitio tiene deliberadamente un solo tema claro. La interfaz adopta una TUI de lectura: barras de sección, paneles delimitados y navegación con selección inversa. La escala tipográfica es contenida y el movimiento respeta la preferencia de movimiento reducido.
+
+El lenguaje sitúa la custodia en la continuidad y el gobierno común de las herramientas. La demora se expresa como atención, permanencia y deliberación; es una formulación editorial, no una cita atribuida a Heidegger. Los cambios de contenido se mantienen en español e inglés.
 
 ## Accesibilidad
 

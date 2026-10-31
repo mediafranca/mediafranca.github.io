@@ -4,7 +4,7 @@ Propuesta de versión mejorada del [Manifiesto para el Diseño de Interacción e
 
 Este documento es una propuesta abierta a revisión. No describe lo que MediaFranca ya hace, sino los compromisos que asumirá y bajo los cuales pedirá que se la juzgue. Está escrito, deliberadamente, en tiempo futuro.
 
-Su traducción normativa vive en la [Constitución tecnológica de MediaFranca](CONSTITUCION.md). El Manifiesto conserva el horizonte ético y poético; la Constitución extrae de él leyes ordenadas, deberes verificables y criterios para los estatutos de Fundación MediaFranca y los proyectos bajo su custodia.
+Su traducción normativa vive en la [Constitución tecnológica de MediaFranca](CONSTITUCION.md). El Manifiesto es su suelo ético y poético; la Constitución hace crecer desde él leyes ordenadas, deberes verificables y criterios para los estatutos de Fundación MediaFranca y los proyectos bajo su custodia.
 
 ## Preámbulo
 

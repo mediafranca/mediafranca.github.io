@@ -4,9 +4,9 @@
 **Custodia prevista:** Fundación MediaFranca, actualmente en formación.  
 **Fuente ética:** [*Manifiesto para el Diseño de Interacción en un Tiempo que se Despliega*](https://herbertspencer.net/2025/manifiesto).
 
-## Preámbulo
+## Suelo poético
 
-El Diseño anticipa mundos. Cada artefacto, interfaz, protocolo y sistema distribuye posibilidades de acción, atención y relación; por eso nunca es neutral ni responde solamente a quien lo construye.
+El Diseño es inteligencia que se vuelve imaginación. Anticipa mundos, reúne lo disperso y abre lugar a lo que todavía no existe. Cada artefacto, interfaz, protocolo y sistema distribuye posibilidades de acción, atención y relación; por eso nunca es neutral ni responde solamente a quien lo construye.
 
 MediaFranca custodiará tecnologías convivenciales: herramientas que amplían la capacidad de las personas y comunidades sin volverlas dependientes de poderes que no pueden comprender, discutir ni transformar. Esta Constitución traduce el horizonte poético y ético del Manifiesto en leyes breves, ordenadas y exigibles. Su finalidad no es clausurar la imaginación, sino impedir que la eficacia técnica se vuelva excusa para degradar la convivencia.
 
@@ -76,4 +76,3 @@ La cadena de responsabilidad será trazable:
 ## Reforma
 
 Esta Constitución puede aprender y cambiar, pero no de manera tácita. Toda reforma debe identificar su motivo, mostrar la diferencia respecto de la versión anterior, explicar sus efectos sobre proyectos y comunidades, ser aprobada por el órgano competente y conservar una vía de retorno. La historia de sus versiones forma parte de la Constitución.
-

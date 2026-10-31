@@ -86,6 +86,24 @@
     for (var s = 0; s < sections.length; s++) observer.observe(sections[s]);
   }
 
+  /* ---- Barra de menú: aparece al scroll ----------------------------- */
+
+  /*
+    La barra superior permanece oculta mientras se ve el título grande
+    "MediaFranca" del hero. Cuando ese título sale de la pantalla, la
+    barra se revela; al volver arriba, se oculta de nuevo.
+  */
+  function initHeaderReveal() {
+    var header = document.querySelector(".site-header");
+    var title = document.querySelector(".hero-title");
+    if (!header || !title) return;
+    if (!("IntersectionObserver" in window)) { header.classList.add("is-revealed"); return; }
+    var obs = new IntersectionObserver(function (entries) {
+      header.classList.toggle("is-revealed", !entries[0].isIntersecting);
+    }, { threshold: 0 });
+    obs.observe(title);
+  }
+
   /* ---- Arranque ----------------------------------------------------- */
 
   function init() {
@@ -98,8 +116,9 @@
     }
     applyLang(initialLang());
 
-    // Navegación
+    // Navegación y barra
     initNav();
+    initHeaderReveal();
   }
 
   if (document.readyState === "loading") {

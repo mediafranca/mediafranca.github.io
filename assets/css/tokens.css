@@ -46,17 +46,19 @@
 }
 
 /* ---------------- Tipografía ----------------
-   Monoespaciada. IBM Plex Mono para todo: Light (300) en display —el
-   "grito silencioso"— y 400/500/600 para UI.
+   Bricolage Grotesque para lectura y títulos: una grotesca cálida, de
+   caja abierta, que respira. IBM Plex Mono queda reservada para las
+   etiquetas técnicas (nombres de esquema, repos, rótulos de sección):
+   el único rastro del origen técnico del proyecto.
 
-   RETÍCULA DE LÍNEA BASE: --baseline = 8px. Toda altura de línea y todo
-   espacio vertical es múltiplo entero de esa unidad. Por eso las alturas
-   de línea se declaran en rem absolutos (no en razones): una razón produce
-   fracciones de píxel y rompe la retícula. */
+   RETÍCULA DE LÍNEA BASE: --baseline = 8px. Los espacios verticales son
+   múltiplos de esa unidad; el cuerpo usa una interlínea de lectura algo
+   más holgada que la grilla estricta. */
 :root {
-  --font-display:"IBM Plex Mono", ui-monospace, "Fira Code", "SFMono-Regular", monospace;
+  --font-display:"Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-text:"Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono:"IBM Plex Mono", ui-monospace, "Fira Code", "SFMono-Regular", monospace;
-  --font-body:var(--font-mono);
+  --font-body:var(--font-text);
 
   --w-light:300; --w-regular:400; --w-medium:500; --w-semibold:600; --w-bold:700;
 
@@ -126,8 +128,8 @@
 
 /* ---------------- Efectos ---------------- */
 :root {
-  /* Radios: terminal cuadrada */
-  --r-none:0; --r-sm:2px; --r-md:4px; --r-pill:999px;
+  /* Radios: esquinas suaves (ni caja de terminal ni burbuja) */
+  --r-none:0; --r-sm:6px; --r-md:10px; --r-lg:16px; --r-pill:999px;
 
   /* Bordes */
   --bw:1px; --bw-thick:2px;

@@ -19,11 +19,11 @@
 
   <link rel="icon" href="assets/logo/mf.svg" type="image/svg+xml" />
 
-  <!-- IBM Plex Mono (OFL): toda la familia tipográfica del SDMF.
-       Sustitución declarada: reemplazar por archivos autoalojados cuando existan. -->
+  <!-- Bricolage Grotesque (lectura y títulos) + IBM Plex Mono (rótulos técnicos),
+       ambas OFL. Sustitución declarada: autoalojar cuando existan los archivos. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/tokens.css" />
   <link rel="stylesheet" href="assets/css/site.css" />
@@ -40,7 +40,7 @@
   <a class="brand" href="#top" aria-label="MediaFranca — inicio">
     <!-- Isotipo: máscara CSS sobre assets/logo/mf.svg, teñida con el fósforo del canal activo -->
     <span class="mark" aria-hidden="true"></span>
-    <span class="name">MediaFranca<span class="tld">.net</span></span>
+    <span class="name">MediaFranca</span>
   </a>
 
   <nav class="site-nav" id="menu" aria-label="Navegación principal">
@@ -77,14 +77,14 @@
           </a>
           <span>· Valparaíso, Chile</span>
         </span>
-        <h1 class="hero-title">MediaFranca<span class="cursor" aria-hidden="true"></span></h1>
+        <h1 class="hero-title">MediaFranca</h1>
         <p class="hero-tagline">
           <span data-lang="es" class="is-active">tecnologías convivenciales para la comunicación humana</span>
           <span data-lang="en">convivial technologies for human communication</span>
         </p>
         <p class="hero-lead">
-          <span data-lang="es" class="is-active">MediaFranca crea y custodia herramientas abiertas para decir, comprender y participar. Las comunidades que las habitan pueden estudiarlas, repararlas y gobernarlas.</span>
-          <span data-lang="en">MediaFranca creates and stewards open tools for expression, understanding and participation. The communities that inhabit them can study, repair and govern them.</span>
+          <span data-lang="es" class="is-active">MediaFranca crea y custodia herramientas abiertas que amplían lo que las personas pueden hacer. Quienes las usan las comprenden, reparan y gobiernan.</span>
+          <span data-lang="en">MediaFranca creates and stewards open tools that widen what people can do. Those who use them understand, repair and govern them.</span>
         </p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="#proyectos">
@@ -99,46 +99,52 @@
       </div>
 
       <!--
-        Grafo de proyectos: constelación estática en SVG + nodos HTML
-        posicionados. Nueve nodos en dos radios alternos (148/208 px)
-        alrededor del isotipo; las coordenadas están precalculadas.
+        Grafo de proyectos: constelación estática (SVG + nodos HTML
+        posicionados). Trece nodos en dos radios alternos alrededor del
+        isotipo; coordenadas precalculadas. Sin ventana: flota sobre el
+        mismo fondo de la página.
       -->
-      <div class="terminal">
-        <div class="terminal-bar">
-          <span data-lang="es" class="is-active">proyectos / constelación</span><span data-lang="en">projects / constellation</span>
-        </div>
+      <div class="constellation">
         <div class="graph-viewport">
           <div class="graph-stage">
             <svg width="560" height="544" viewBox="0 0 560 544" aria-hidden="true">
               <circle cx="280" cy="264" r="90" fill="none" stroke="var(--line)" stroke-width="1"></circle>
               <circle cx="280" cy="264" r="150" fill="none" stroke="var(--line)" stroke-width="1"></circle>
               <circle cx="280" cy="264" r="210" fill="none" stroke="var(--line)" stroke-width="1"></circle>
-              <line x1="280" y1="264" x2="280" y2="116" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.55"></line>
-              <line x1="280" y1="264" x2="414" y2="105" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.55"></line>
-              <line x1="280" y1="264" x2="426" y2="238" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.55"></line>
-              <line x1="280" y1="264" x2="460" y2="368" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.55"></line>
-              <line x1="280" y1="264" x2="331" y2="403" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.55"></line>
-              <line x1="280" y1="264" x2="152" y2="338" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.55"></line>
-              <line x1="280" y1="264" x2="75" y2="228" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.55"></line>
-              <line x1="280" y1="264" x2="185" y2="151" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.55"></line>
-              <line x1="280" y1="264" x2="139" y2="213" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.55"></line>
+              <line x1="280" y1="264" x2="280" y2="114" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.5"></line>
+              <line x1="280" y1="264" x2="378" y2="78" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.5"></line>
+              <line x1="280" y1="264" x2="403" y2="179" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.5"></line>
+              <line x1="280" y1="264" x2="488" y2="239" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.5"></line>
+              <line x1="280" y1="264" x2="420" y2="317" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.5"></line>
+              <line x1="280" y1="264" x2="419" y2="421" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.5"></line>
+              <line x1="280" y1="264" x2="316" y2="410" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.5"></line>
+              <line x1="280" y1="264" x2="230" y2="468" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.5"></line>
+              <line x1="280" y1="264" x2="181" y2="376" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.5"></line>
+              <line x1="280" y1="264" x2="84" y2="338" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.5"></line>
+              <line x1="280" y1="264" x2="131" y2="246" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.5"></line>
+              <line x1="280" y1="264" x2="107" y2="145" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.5"></line>
+              <line x1="280" y1="264" x2="210" y2="131" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 5" opacity="0.5"></line>
             </svg>
             <div class="graph-core" aria-hidden="true"></div>
-            <a class="graph-node" style="--node-color:var(--tag-caa);left:280px;top:116px" href="https://github.com/mediafranca/pictos-net" title="pictos.net"><span class="pip" aria-hidden="true"></span><span class="tag">pictos.net</span></a>
-            <a class="graph-node" style="--node-color:var(--tag-caa);left:414px;top:105px" href="https://github.com/mediafranca/ICAP" title="ICAP"><span class="pip" aria-hidden="true"></span><span class="tag">ICAP</span></a>
-            <a class="graph-node" style="--node-color:var(--tag-caa);left:426px;top:238px" href="https://github.com/mediafranca/mf-svg-schema" title="mf-svg-schema"><span class="pip" aria-hidden="true"></span><span class="tag">mf-svg-schema</span></a>
-            <a class="graph-node" style="--node-color:var(--tag-caa);left:460px;top:368px" href="https://github.com/mediafranca/nlu-schema" title="nlu-schema"><span class="pip" aria-hidden="true"></span><span class="tag">nlu-schema</span></a>
-            <a class="graph-node" style="--node-color:var(--tag-lenguaje);left:331px;top:403px" href="https://github.com/mediafranca/constel" title="con§tel"><span class="pip" aria-hidden="true"></span><span class="tag">con§tel</span></a>
-            <a class="graph-node" style="--node-color:var(--tag-lenguaje);left:152px;top:338px" href="https://github.com/mediafranca/lectografo" title="lectografo"><span class="pip" aria-hidden="true"></span><span class="tag">lectografo</span></a>
-            <a class="graph-node" style="--node-color:var(--tag-soberania);left:75px;top:228px" href="https://github.com/mediafranca/lombardi" title="lombardi"><span class="pip" aria-hidden="true"></span><span class="tag">lombardi</span></a>
-            <a class="graph-node" style="--node-color:var(--tag-soberania);left:185px;top:151px" href="https://github.com/mediafranca/filippo3d" title="filippo3d"><span class="pip" aria-hidden="true"></span><span class="tag">filippo3d</span></a>
-            <a class="graph-node" style="--node-color:var(--tag-soberania);left:139px;top:213px" href="https://vera.mediafranca.net/vera/" title="Vera"><span class="pip" aria-hidden="true"></span><span class="tag">Vera</span></a>
+            <a class="graph-node" style="left:280px;top:114px" href="https://pictos.net" title="PICTOS.net"><span class="pip" aria-hidden="true"></span><span class="tag">PICTOS.net</span></a>
+            <a class="graph-node" style="left:378px;top:78px" href="https://github.com/mediafranca/ICAP" title="ICAP"><span class="pip" aria-hidden="true"></span><span class="tag">ICAP</span></a>
+            <a class="graph-node" style="left:403px;top:179px" href="https://github.com/mediafranca/pictos-svg-schema" title="pictos-svg-schema"><span class="pip" aria-hidden="true"></span><span class="tag">svg-schema</span></a>
+            <a class="graph-node" style="left:488px;top:239px" href="https://github.com/mediafranca/pictos-nlu-schema" title="pictos-nlu-schema"><span class="pip" aria-hidden="true"></span><span class="tag">nlu-schema</span></a>
+            <a class="graph-node" style="left:420px;top:317px" href="https://github.com/mediafranca/pictos-composition-schema" title="pictos-composition-schema"><span class="pip" aria-hidden="true"></span><span class="tag">composition-schema</span></a>
+            <a class="graph-node" style="left:419px;top:421px" href="https://github.com/mediafranca/pictos-api-schema" title="pictos-api-schema"><span class="pip" aria-hidden="true"></span><span class="tag">api-schema</span></a>
+            <a class="graph-node" style="left:316px;top:410px" href="https://github.com/mediafranca/constel" title="con§tel"><span class="pip" aria-hidden="true"></span><span class="tag">con§tel</span></a>
+            <a class="graph-node" style="left:230px;top:468px" href="https://github.com/mediafranca/lectografo" title="lectografo"><span class="pip" aria-hidden="true"></span><span class="tag">lectografo</span></a>
+            <a class="graph-node" style="left:181px;top:376px" href="https://vera.mediafranca.net/vera/" title="Vera"><span class="pip" aria-hidden="true"></span><span class="tag">Vera</span></a>
+            <a class="graph-node" style="left:84px;top:338px" href="https://github.com/mediafranca/vera-conecta" title="Vera Conecta"><span class="pip" aria-hidden="true"></span><span class="tag">Vera Conecta</span></a>
+            <a class="graph-node" style="left:131px;top:246px" href="https://vera.mediafranca.net/luca" title="Luca"><span class="pip" aria-hidden="true"></span><span class="tag">Luca</span></a>
+            <a class="graph-node" style="left:107px;top:145px" href="https://github.com/mediafranca/lombardi" title="lombardi"><span class="pip" aria-hidden="true"></span><span class="tag">lombardi</span></a>
+            <a class="graph-node" style="left:210px;top:131px" href="https://github.com/mediafranca/filippo3d" title="filippo3d"><span class="pip" aria-hidden="true"></span><span class="tag">filippo3d</span></a>
           </div>
         </div>
-        <div class="terminal-foot">
+        <p class="graph-caption">
           <span data-lang="es" class="is-active">cada nodo abre el sitio o repositorio del proyecto</span>
           <span data-lang="en">each node opens the project’s site or repository</span>
-        </div>
+        </p>
       </div>
     </div>
   </section>
@@ -146,11 +152,11 @@
   <!-- ============ QUÉ ES ============ -->
   <section id="que-es">
     <div class="shell">
-      <div class="eyebrow"><span class="sigil">§</span><span>01</span><span class="rule" aria-hidden="true"></span><span data-lang="es" class="is-active">qué es</span><span data-lang="en">about</span></div>
+      <div class="eyebrow"><span data-lang="es" class="is-active">qué es</span><span data-lang="en">about</span></div>
       <div class="two-col" style="gap:var(--space-12)">
         <p class="lede">
-          <span data-lang="es" class="is-active">Fundación MediaFranca será una institución para el cuidado compartido de bienes públicos digitales. Reunirá pictogramas, textos, esquemas, grafos y software bajo un gobierno abierto a sus comunidades de uso.</span>
-          <span data-lang="en">Fundación MediaFranca will be an institution for the shared care of digital public goods. It will bring pictograms, texts, schemas, graphs and software under governance open to their communities of use.</span>
+          <span data-lang="es" class="is-active">Fundación MediaFranca custodiará los bienes públicos digitales del lenguaje abierto: pictogramas, textos, esquemas, grafos y software que sirven para comunicar el conocimiento de forma convivencial. Los reunirá bajo un gobierno abierto a las comunidades que los usan.</span>
+          <span data-lang="en">Fundación MediaFranca will steward the digital public goods of open language: pictograms, texts, schemas, graphs and software that serve to communicate knowledge in a convivial way. It will bring them together under governance open to the communities that use them.</span>
         </p>
         <p class="body-copy">
           <span data-lang="es" class="is-active">Cada herramienta expresa una idea de persona y distribuye capacidades. MediaFranca hará visibles esas decisiones mediante principios escritos, procesos revisables y responsabilidades públicas. Su formación comienza con escucha, deliberación y compromiso compartido.</span>
@@ -163,7 +169,7 @@
   <!-- ============ VISIÓN ============ -->
   <section id="vision">
     <div class="shell">
-      <div class="eyebrow"><span class="sigil">§</span><span>02</span><span class="rule" aria-hidden="true"></span><span data-lang="es" class="is-active">visión</span><span data-lang="en">vision</span></div>
+      <div class="eyebrow"><span data-lang="es" class="is-active">visión</span><span data-lang="en">vision</span></div>
       <h2 class="headline">
         <span data-lang="es" class="is-active">La dignidad orienta la técnica</span>
         <span data-lang="en">Human dignity guides technology</span>
@@ -190,7 +196,7 @@
   <!-- ============ MISIÓN ============ -->
   <section id="mision">
     <div class="shell">
-      <div class="eyebrow"><span class="sigil">§</span><span>03</span><span class="rule" aria-hidden="true"></span><span data-lang="es" class="is-active">misión</span><span data-lang="en">mission</span></div>
+      <div class="eyebrow"><span data-lang="es" class="is-active">misión</span><span data-lang="en">mission</span></div>
       <h2 class="headline">
         <span data-lang="es" class="is-active">Gobernar y custodiar el bien común digital</span>
         <span data-lang="en">Governing and stewarding the digital commons</span>
@@ -201,8 +207,8 @@
           <span data-lang="en">MediaFranca will bring together communities of use, research, design and development to govern open software, standards, schemas and content. Its public decisions will define which projects receive stewardship and how they sustain their status as digital public goods.<sup class="footnote-ref"><a href="#fn4" id="fnref4en">4</a></sup></span>
         </p>
         <p class="body-copy">
-          <span data-lang="es" class="is-active">Custodiar significa financiar el desarrollo, mantener las obras, cuidar sus estándares y asegurar la circulación del conocimiento. Cada proyecto recibido conserva una comunidad responsable de su continuidad y uso común.</span>
-          <span data-lang="en">Stewardship means funding development, maintaining works, caring for their standards and ensuring that knowledge circulates. Each entrusted project retains a community responsible for its continuity and shared use.</span>
+          <span data-lang="es" class="is-active">La custodia es activa: financia y sostiene el desarrollo, cuida los estándares, protege los bienes comunes y mantiene el conocimiento en libre circulación. Cada proyecto conserva una comunidad responsable de su continuidad.</span>
+          <span data-lang="en">Stewardship is active: it funds and sustains development, cares for standards, protects the commons and keeps knowledge in free circulation. Each project keeps a community responsible for its continuity.</span>
         </p>
       </div>
 
@@ -211,19 +217,11 @@
         <span data-lang="en">the nested structure</span>
       </h3>
       <p class="body-copy">
-        <span data-lang="es" class="is-active">La misión operará en tres círculos concéntricos. Cada uno contiene y da sentido al siguiente: la convivencialidad es el horizonte, el lenguaje abierto es el medio, y la accesibilidad cognitiva es el dominio donde todo se encarna.</span>
-        <span data-lang="en">The mission will operate in three concentric circles. Each contains and gives meaning to the next: conviviality is the horizon, open language is the medium, and cognitive accessibility is the domain where all of it is embodied.</span>
+        <span data-lang="es" class="is-active">La misión opera en tres círculos concéntricos. Cada uno contiene y da sentido al siguiente: la convivencialidad es el horizonte, el lenguaje abierto es el medio, y la hospitalidad y el diseño universal son el dominio donde todo se encarna.</span>
+        <span data-lang="en">The mission operates in three concentric circles. Each contains and gives meaning to the next: conviviality is the horizon, open language is the medium, and hospitality and universal design are the domain where all of it is embodied.</span>
       </p>
 
       <div class="circles-grid">
-        <div class="circles-diagram" aria-hidden="true">
-          <div class="ring-1"></div>
-          <div class="ring-2"></div>
-          <div class="ring-3"></div>
-          <span class="n n-1">01</span>
-          <span class="n n-2">02</span>
-          <span class="n n-3">03</span>
-        </div>
         <div class="circles-list">
           <div class="circle-item" style="--circle-color:var(--tag-soberania)">
             <span class="n" aria-hidden="true">01</span>
@@ -255,12 +253,12 @@
             <span class="n" aria-hidden="true">03</span>
             <div>
               <div class="c-title">
-                <span data-lang="es" class="is-active">Accesibilidad cognitiva y CAA</span>
-                <span data-lang="en">Cognitive accessibility &amp; AAC</span>
+                <span data-lang="es" class="is-active">Hospitalidad y diseño universal</span>
+                <span data-lang="en">Hospitality and universal design</span>
               </div>
               <div class="c-desc">
-                <span data-lang="es" class="is-active">El dominio encarnado. Pictogramas para la comunicación aumentativa y alternativa, diseñados con la participación directa de las personas que los usan.</span>
-                <span data-lang="en">The embodied domain. Pictograms for augmentative and alternative communication, designed with the direct participation of the people who use them.</span>
+                <span data-lang="es" class="is-active">El dominio encarnado. Diseñar para la diversidad humana desde el origen. Aquí se concreta en accesibilidad cognitiva y en comunicación aumentativa y alternativa (CAA): pictogramas y herramientas creados junto a quienes los usan, como coautoras y protagonistas.</span>
+                <span data-lang="en">The embodied domain. Designing for human diversity from the start. Here it takes shape as cognitive accessibility and augmentative and alternative communication (AAC): pictograms and tools created together with those who use them, as co-authors and protagonists.</span>
               </div>
             </div>
           </div>
@@ -272,7 +270,7 @@
   <!-- ============ CONSTITUCIÓN TECNOLÓGICA ============ -->
   <section id="constitucion">
     <div class="shell">
-      <div class="eyebrow"><span class="sigil">§</span><span>04</span><span class="rule" aria-hidden="true"></span><span data-lang="es" class="is-active">constitución tecnológica</span><span data-lang="en">technological constitution</span></div>
+      <div class="eyebrow"><span data-lang="es" class="is-active">constitución tecnológica</span><span data-lang="en">technological constitution</span></div>
       <h2 class="headline">
         <span data-lang="es" class="is-active">Cinco leyes para responder por la tecnología</span>
         <span data-lang="en">Five laws for technological accountability</span>
@@ -341,7 +339,7 @@
   <!-- ============ PROYECTOS ============ -->
   <section id="proyectos">
     <div class="shell">
-      <div class="eyebrow"><span class="sigil">§</span><span>05</span><span class="rule" aria-hidden="true"></span><span data-lang="es" class="is-active">proyectos</span><span data-lang="en">projects</span></div>
+      <div class="eyebrow"><span data-lang="es" class="is-active">proyectos</span><span data-lang="en">projects</span></div>
       <h2 class="headline">
         <span data-lang="es" class="is-active">Lo que ya existe y MediaFranca cuidará</span>
         <span data-lang="en">What already exists and MediaFranca will care for</span>
@@ -372,17 +370,44 @@
           </div>
         </article>
 
+        <article class="project">
+          <div class="project-head">
+            <span class="project-name">Luca</span>
+          </div>
+          <p class="desc">
+            <span data-lang="es" class="is-active">Editor de Markdown y Wikitext de escritorio. Guarda los archivos sin añadirles nada y acompaña a Vera en el trabajo con texto.</span>
+            <span data-lang="en">A desktop Markdown and Wikitext editor. It saves files without adding anything and accompanies Vera in working with text.</span>
+          </p>
+          <div class="links">
+            <a href="https://vera.mediafranca.net/luca">luca ↗</a>
+            <a class="repo" href="https://github.com/mediafranca/luca">repo ↗</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <span class="project-name">Vera Conecta</span>
+          </div>
+          <p class="desc">
+            <span data-lang="es" class="is-active">Puente que lleva herramientas y capturas a tu Vera local mediante una conexión saliente desde el escritorio. El grafo permanece en tu equipo.</span>
+            <span data-lang="en">A bridge that carries tools and captures to your local Vera through an outbound desktop connection. The graph stays on your device.</span>
+          </p>
+          <div class="links">
+            <a class="repo" href="https://github.com/mediafranca/vera-conecta">repo ↗</a>
+          </div>
+        </article>
+
         <!-- Círculo 3 · CAA -->
         <article class="project">
           <div class="project-head">
-            <span class="project-name">pictos.net</span>
+            <span class="project-name">PICTOS.net</span>
           </div>
           <p class="desc">
             <span data-lang="es" class="is-active">Servicio web para generar, editar y organizar pictogramas localmente. Creado para profesoras, terapeutas y familias.</span>
             <span data-lang="en">A web service for generating, editing and organising pictograms locally. Created for teachers, therapists and families.</span>
           </p>
           <div class="links">
-            <a href="https://pictos.net">pictos.net ↗</a>
+            <a href="https://pictos.net">PICTOS.net ↗</a>
             <a class="repo" href="https://github.com/mediafranca/pictos-net">repo ↗</a>
           </div>
         </article>
@@ -402,27 +427,53 @@
 
         <article class="project">
           <div class="project-head">
-            <span class="project-name">mf-svg-schema</span>
+            <span class="project-name">pictos-svg-schema</span>
           </div>
           <p class="desc">
-            <span data-lang="es" class="is-active">Esquema SVG para pictogramas de CAA. Estructura común para que sean editables, interoperables y accesibles.</span>
-            <span data-lang="en">SVG schema for AAC pictograms. A common structure so they are editable, interoperable and accessible.</span>
+            <span data-lang="es" class="is-active">Esquema SVG para pictogramas de CAA: una estructura común para que sean editables, interoperables y accesibles.</span>
+            <span data-lang="en">SVG schema for AAC pictograms: a common structure so they are editable, interoperable and accessible.</span>
           </p>
           <div class="links">
-            <a class="repo" href="https://github.com/mediafranca/mf-svg-schema">repo ↗</a>
+            <a class="repo" href="https://github.com/mediafranca/pictos-svg-schema">repo ↗</a>
           </div>
         </article>
 
         <article class="project">
           <div class="project-head">
-            <span class="project-name">nlu-schema</span>
+            <span class="project-name">pictos-nlu-schema</span>
           </div>
           <p class="desc">
-            <span data-lang="es" class="is-active">Esquema JSON para la comprensión de lenguaje natural. Representa la intención comunicativa antes de traducirla a pictogramas.</span>
-            <span data-lang="en">JSON schema for natural-language understanding. It represents communicative intent before translating it into pictograms.</span>
+            <span data-lang="es" class="is-active">Esquema de comprensión de lenguaje natural: representa la intención comunicativa antes de traducirla a pictogramas.</span>
+            <span data-lang="en">Natural-language understanding schema: it represents communicative intent before translating it into pictograms.</span>
           </p>
           <div class="links">
-            <a class="repo" href="https://github.com/mediafranca/nlu-schema">repo ↗</a>
+            <a class="repo" href="https://github.com/mediafranca/pictos-nlu-schema">repo ↗</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <span class="project-name">pictos-composition-schema</span>
+          </div>
+          <p class="desc">
+            <span data-lang="es" class="is-active">Esquema de composición: describe cómo se combinan y disponen los pictogramas para formar una escena o un enunciado.</span>
+            <span data-lang="en">Composition schema: it describes how pictograms combine and arrange to form a scene or an utterance.</span>
+          </p>
+          <div class="links">
+            <a class="repo" href="https://github.com/mediafranca/pictos-composition-schema">repo ↗</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <span class="project-name">pictos-api-schema</span>
+          </div>
+          <p class="desc">
+            <span data-lang="es" class="is-active">Esquema de la API de PICTOS: los contratos de las operaciones de comprender, estructurar, componer y producir.</span>
+            <span data-lang="en">PICTOS API schema: the contracts for the understand, structure, compose and produce operations.</span>
+          </p>
+          <div class="links">
+            <a class="repo" href="https://github.com/mediafranca/pictos-api-schema">repo ↗</a>
           </div>
         </article>
 
@@ -487,7 +538,7 @@
   <!-- ============ PARTICIPAR ============ -->
   <section id="participar">
     <div class="shell">
-      <div class="eyebrow"><span class="sigil">§</span><span>06</span><span class="rule" aria-hidden="true"></span><span data-lang="es" class="is-active">participar</span><span data-lang="en">join</span></div>
+      <div class="eyebrow"><span data-lang="es" class="is-active">participar</span><span data-lang="en">join</span></div>
       <div class="join-grid">
         <div>
           <h2 class="headline"><span data-lang="es" class="is-active">Cuidemos juntos las herramientas que nos permiten participar</span><span data-lang="en">Let us care together for the tools that enable participation</span></h2>

@@ -243,16 +243,6 @@ h2.headline {
 .circle-item .c-desc { font-size: var(--t-sm); color: var(--ink-dim); line-height: var(--lh-snug); }
 
 /* =================== PRINCIPIOS =================== */
-.sovereignty-posture {
-  display: grid; grid-template-columns: 92px minmax(0, 34rem); gap: var(--space-6);
-  align-items: center; margin: var(--space-10) 0 0;
-}
-.sovereignty-posture img {
-  display: block; width: 92px; height: auto;
-}
-.sovereignty-posture figcaption { display: grid; gap: var(--space-2); color: var(--ink); line-height: var(--lh-snug); }
-.sovereignty-posture strong { color: var(--signal); font-family: var(--font-mono); text-transform: none; letter-spacing: var(--track-wide); }
-
 .principles {
   display: grid; grid-template-columns: repeat(3,1fr); gap: 1px;
   background: var(--line); border: 1px solid var(--line);
@@ -298,22 +288,6 @@ h2.headline {
 .spec-row:last-child { border-bottom: none; }
 .spec-row .k { font-size: var(--t-xs); text-transform: none; letter-spacing: 0; color: var(--ink-faint); }
 .spec-row .v { font-size: var(--t-sm); color: var(--ink); line-height: var(--lh-snug); }
-
-/* =================== CONTACTO =================== */
-.contact { text-align: left; }
-.contact-head {
-  font-family: var(--font-display); font-weight: var(--w-light);
-  font-size: var(--t-2xl); line-height: var(--lh-5u); letter-spacing: -.03em;
-  color: var(--ink-bright); text-shadow: var(--text-glow-strong); margin: 0 0 var(--space-6);
-}
-.contact .body-copy { margin-left: 0; margin-right: 0; max-width: 64ch; margin-bottom: var(--space-8); }
-.contact-mail {
-  font-family: var(--font-display); font-weight: var(--w-light);
-  font-size: var(--t-2xl); letter-spacing: -.02em;
-  color: var(--signal); text-shadow: var(--text-glow);
-  border-bottom: 1px solid var(--line-strong);
-}
-.contact-mail:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
 /* =================== NOTAS AL PIE =================== */
 .footnote-ref a { border-bottom: none; font-size: .72em; }
@@ -378,8 +352,6 @@ h2.headline {
 }
 
 @media (max-width: 640px) {
-  .sovereignty-posture { grid-template-columns: 64px 1fr; }
-  .sovereignty-posture img { width: 64px; }
   section[id] { padding: var(--space-16) var(--space-4); }
   .hero { padding: var(--space-12) var(--space-4) var(--space-16); }
   .site-header { padding: var(--space-2) var(--space-4); }
@@ -392,7 +364,7 @@ h2.headline {
   .circles-diagram .n-2 { top: 62px; }
   .spec-row { grid-template-columns: 1fr; gap: var(--space-1); }
   .hero-title { font-size: var(--t-xl); line-height: var(--lh-4u); }
-  h2.headline, .contact-head { font-size: var(--t-2xl); line-height: var(--lh-5u); }
+  h2.headline { font-size: var(--t-2xl); line-height: var(--lh-5u); }
   .project.featured { flex-direction: column; }
   .featured-meta { width: auto; }
 }
@@ -432,9 +404,8 @@ h2.headline {
   section[id] { padding: var(--space-10) var(--space-4); scroll-margin-top: 160px; }
   .principles, .projects-grid { grid-template-columns: minmax(0,1fr); }
   .spec-row { grid-template-columns: 1fr; }
-  .contact-mail { font-size: var(--t-lg); }
   .hero-title { font-size: clamp(1.75rem, 8vw, 2.5rem); }
-  h2.headline, .contact-head { font-size: var(--t-xl); line-height: var(--lh-4u); }
+  h2.headline { font-size: var(--t-xl); line-height: var(--lh-4u); }
   .btn { max-width: 100%; overflow-wrap: anywhere; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

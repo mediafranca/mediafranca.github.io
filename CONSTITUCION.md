@@ -6,54 +6,54 @@
 
 ## Suelo poético
 
-El Diseño es inteligencia que se vuelve imaginación. Anticipa mundos, reúne lo disperso y abre lugar a lo que todavía no existe. Cada artefacto, interfaz, protocolo y sistema distribuye posibilidades de acción, atención y relación; por eso nunca es neutral ni responde solamente a quien lo construye.
+El Diseño es inteligencia que se vuelve imaginación. Anticipa mundos, reúne lo disperso y abre lugar a lo posible. Cada artefacto, interfaz, protocolo y sistema distribuye formas de actuar, atender y relacionarse.
 
-MediaFranca custodiará tecnologías convivenciales: herramientas que amplían la capacidad de las personas y comunidades sin volverlas dependientes de poderes que no pueden comprender, discutir ni transformar. Esta Constitución traduce el horizonte poético y ético del Manifiesto en leyes breves, ordenadas y exigibles. Su finalidad no es clausurar la imaginación, sino impedir que la eficacia técnica se vuelva excusa para degradar la convivencia.
+MediaFranca custodiará tecnologías convivenciales: herramientas que amplían la capacidad de personas y comunidades y fortalecen su autonomía. Esta Constitución traduce el horizonte poético y ético del Manifiesto en leyes breves, ordenadas y exigibles. Imaginación y deber permanecen unidos en cada decisión.
 
 ## Ámbito
 
 Estas leyes obligan a MediaFranca en el diseño, selección, desarrollo, custodia, financiamiento, publicación y retiro de tecnologías. También constituyen el criterio para admitir proyectos, resolver conflictos, evaluar proveedores y rendir cuentas.
 
-Cuando dos leyes entren en tensión, prevalece la de número menor. Ninguna obligación inferior puede invocarse para violar una superior. La aplicación de cada ley debe quedar argumentada y abierta a revisión.
+Cuando dos leyes entren en tensión, prevalece la de número menor. Cada decisión dejará un argumento público y revisable que muestre cómo aplicó esta precedencia.
 
 ## Ley 0 · Convivencia
 
-**Toda tecnología debe contribuir a un mundo compartido habitable, plural y digno. Ninguna optimización particular puede destruir las condiciones comunes que permiten a las personas y comunidades existir, relacionarse y devenir.**
+**Toda tecnología debe cuidar un mundo compartido, habitable, plural y digno. Sus fines particulares se subordinan a las condiciones comunes que permiten a personas y comunidades existir, relacionarse y devenir.**
 
-La técnica participa en la configuración de la polis. Su valor no se agota en funcionar, escalar o producir rendimiento: debe responder por el mundo que hace posible y por aquello que vuelve invisible, inaccesible o imposible.
+La técnica participa en la configuración de la polis. Su valor comprende el mundo que hace posible, las relaciones que cultiva y las capacidades que distribuye.
 
 ## Ley 1 · Agencia
 
-**La tecnología no debe reducir a una persona a objeto de control. Debe preservar consentimiento genuino, capacidad de negativa, reversibilidad y responsabilidad humana.**
+**Toda persona conserva su condición de sujeto ante la tecnología: consentimiento genuino, capacidad de negativa, reversibilidad y responsabilidad humana.**
 
-Amplificar no es sustituir. Una herramienta puede asistir, recomendar o ejecutar, pero no apropiarse silenciosamente de la decisión ni fabricar obediencia mediante coerción, engaño o dependencia. Toda delegación debe poder comprenderse, limitarse y revocarse.
+Una herramienta puede asistir, recomendar o ejecutar. La persona comprende el alcance de cada delegación y conserva la autoridad para limitarla, revocarla y responder por ella.
 
 ## Ley 2 · Hospitalidad
 
 **La tecnología debe poder ser comprendida y habitada por la diversidad de quienes afecta. Debe ser accesible y legible en sus propósitos, límites, procedencia y consecuencias.**
 
-La accesibilidad es la hospitalidad del Diseño. Mostrar el revés de un sistema —su lógica, historia, responsables y costuras— permite entrar, aprender, objetar y participar. La transparencia no autoriza exponer la intimidad: lo común debe ser explicable y lo personal debe permanecer bajo control de su titular.
+La accesibilidad es la hospitalidad del Diseño. Mostrar el revés de un sistema —su lógica, historia, responsables y costuras— permite entrar, aprender, objetar y participar. Lo común es explicable; lo personal permanece bajo el control de su titular.
 
 ## Ley 3 · Soberanía
 
-**Las personas y comunidades deben poder conservar, reparar, trasladar, modificar y gobernar las tecnologías de las que dependen, sin subordinación inevitable a un proveedor.**
+**Las personas y comunidades conservan la capacidad de reparar, trasladar, modificar y gobernar las tecnologías de las que dependen.**
 
-La soberanía no es aislamiento. Exige interoperabilidad, portabilidad, documentación, estándares y formas de federación que permitan cooperar sin entregar el control del propio conocimiento. El código abierto es una condición preferente y, para la infraestructura constitutiva del común, una obligación.
+La soberanía crece mediante interoperabilidad, portabilidad, documentación, estándares y federación. Estas condiciones permiten cooperar y conservar el gobierno del propio conocimiento. La infraestructura constitutiva del común usa código abierto.
 
 ## Ley 4 · Reflexividad
 
-**La tecnología debe revelar cómo llegó a ser, aprender de quienes la habitan y permitir su propia transformación sin violar las leyes anteriores.**
+**La tecnología debe revelar cómo llegó a ser, aprender de quienes la habitan y transformarse bajo la orientación de las leyes anteriores.**
 
-Todo sistema vivo necesita corregirse. La reflexividad convierte crítica y experiencia en cambios verificables: intención, diferencia, pruebas, autoridad, versión, despliegue, evidencia y retorno. No autoriza la autoescritura silenciosa ni obliga a convertir toda intuición en protocolo; protege también lo inacabado y el derecho a seguir pensando.
+Todo sistema vivo aprende y se corrige. La reflexividad convierte crítica y experiencia en cambios verificables: intención, diferencia, pruebas, autoridad, versión, despliegue, evidencia y retorno. La deliberación humana gobierna el cambio y protege el pensamiento todavía inacabado.
 
 ## Deberes derivados
 
 Las leyes se vuelven exigibles mediante, al menos, los siguientes deberes:
 
-1. **No manipular:** prohibir patrones coercitivos, engañosos o adictivos y documentar los conflictos de interés.
+1. **Respetar la agencia:** favorecer decisiones conscientes y documentar los conflictos de interés.
 2. **Diseñar con quienes son afectados:** incorporar experiencia de uso, diversidad cognitiva y conocimiento situado desde el origen.
 3. **Explicar y conservar procedencia:** mostrar propósitos, límites, fuentes, decisiones, autoría y cambios relevantes.
-4. **Asegurar salida y retorno:** permitir exportación, revocación, reversión y continuidad sin cautiverio técnico.
+4. **Asegurar salida y retorno:** permitir exportación, revocación, reversión y continuidad entre sistemas.
 5. **Mantener la reparabilidad:** publicar documentación, formatos y medios razonables para sostener, adaptar o migrar las herramientas.
 6. **Gobernar la automatización:** ligar todo agente a una autoridad humana o institucional identificable, con permisos acotados y revocables.
 7. **Proteger la intimidad:** distinguir transparencia institucional de exposición personal y minimizar la extracción de datos.
@@ -61,9 +61,9 @@ Las leyes se vuelven exigibles mediante, al menos, los siguientes deberes:
 
 ## Traducción institucional
 
-Los estatutos de Fundación MediaFranca deberán convertir esta Constitución en capacidad jurídica: un objeto fundacional que incluya la creación y custodia de software y conocimiento abierto; órganos responsables; reglas de conflicto de interés; destino del patrimonio; participación de comunidades de uso; rendición de cuentas y mecanismos de reforma.
+Los estatutos de Fundación MediaFranca convertirán esta Constitución en capacidad jurídica: un objeto fundacional que incluya la creación y custodia de software y conocimiento abierto; órganos responsables; reglas de conflicto de interés; destino del patrimonio; participación de comunidades de uso; rendición de cuentas y mecanismos de reforma.
 
-La Constitución no sustituye los estatutos. Los orienta y permite juzgar si su aplicación conserva el propósito fundacional.
+La Constitución expresa el fundamento; los estatutos le dan una forma institucional exigible.
 
 ## Traducción ejecutable
 
@@ -75,4 +75,4 @@ La cadena de responsabilidad será trazable:
 
 ## Reforma
 
-Esta Constitución puede aprender y cambiar, pero no de manera tácita. Toda reforma debe identificar su motivo, mostrar la diferencia respecto de la versión anterior, explicar sus efectos sobre proyectos y comunidades, ser aprobada por el órgano competente y conservar una vía de retorno. La historia de sus versiones forma parte de la Constitución.
+Esta Constitución puede aprender y cambiar. Toda reforma será explícita: identificará su motivo, mostrará la diferencia respecto de la versión anterior, explicará sus efectos, recibirá la aprobación del órgano competente y conservará una vía de retorno. La historia de sus versiones forma parte de la Constitución.

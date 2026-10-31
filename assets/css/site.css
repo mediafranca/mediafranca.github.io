@@ -259,6 +259,7 @@ h2.headline {
   margin: var(--space-12) 0 0; padding: 0; list-style: none;
 }
 .principles li { background: var(--screen); padding: var(--space-8); transition: background var(--dur-fast) var(--ease); }
+.principles .law-zero { grid-column: 1 / -1; }
 .principles li:hover { background: var(--panel); }
 .principles .p-n {
   font-family: var(--font-display); font-weight: var(--w-light); font-size: var(--t-sm);

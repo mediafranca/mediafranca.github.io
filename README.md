@@ -2,7 +2,7 @@
 
 Sitio público de [mediafranca.net](https://mediafranca.net/).
 
-MediaFranca es una iniciativa en formación desde Valparaíso, Chile. Invita a colaborar en proyectos, articular alianzas y construir su capacidad de cuidado y gobierno común. La figura jurídica permanece abierta; una corporación sin fines de lucro es una opción futura. Custodiará tecnologías convivenciales para la comunicación humana: software, estándares, esquemas y contenidos de lenguaje abierto.[^1]
+MediaFranca es una fundación en formación desde Valparaíso, Chile. Invita a colaborar en proyectos, articular alianzas y construir su capacidad de cuidado y gobierno común. MediaFranca SpA es el vehículo operativo provisional; el rumbo institucional es constituir Fundación MediaFranca como custodio sin fines de lucro de tecnologías convivenciales para la comunicación humana: software, estándares, esquemas y contenidos de lenguaje abierto.[^1]
 
 El puño alzado expresa su postura de soberanía tecnológica: las herramientas
 deben amplificar la agencia de las personas y permanecer bajo el gobierno de las
@@ -42,7 +42,8 @@ mediafranca.github.io/
 ├── robots.txt
 ├── sitemap.xml
 ├── LICENSE                 Dual: MIT (código) y CC BY 4.0 (contenido)
-├── MANIFESTO.md            Manifiesto de MediaFranca
+├── MANIFESTO.md            Fuente ética y poética de MediaFranca
+├── CONSTITUCION.md         Leyes tecnológicas y deberes verificables
 └── README.md               Este archivo
 ```
 
@@ -122,6 +123,6 @@ Contenido bajo [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); códig
 
 ## Notas
 
-[^1]: La visión y misión canónicas viven en el grafo Logseq privado del custodio (`MediaFranca - Visión y Misión`). Este repositorio contiene solo el sitio público; los documentos de gobernanza (estatutos, plan operativo, modelo de fiscal host) no se versionan aquí.
+[^1]: La visión y misión canónicas viven en Vera (`MediaFranca - Visión y Misión`). Este repositorio publica la Constitución tecnológica; los documentos jurídicos y operativos —estatutos, plan y contratos de transición— se gobiernan separadamente hasta su aprobación formal.
 
 [^2]: El sitio de referencia previo usaba p5.js desde un CDN para la constelación. Esta versión conserva el grafo como SVG y HTML estáticos. Queda pendiente autoalojar IBM Plex Mono para eliminar también la dependencia de Google Fonts.

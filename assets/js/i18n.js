@@ -40,6 +40,12 @@
       b.setAttribute("aria-pressed", b.getAttribute("data-set-lang") === lang ? "true" : "false");
     }
 
+    // Algunos destinos también cambian con el idioma, como el alias de correo.
+    var links = document.querySelectorAll("[data-href-es][data-href-en]");
+    for (var k = 0; k < links.length; k++) {
+      links[k].setAttribute("href", links[k].getAttribute("data-href-" + lang));
+    }
+
     try { localStorage.setItem(STORE_LANG, lang); } catch (e) {}
   }
 

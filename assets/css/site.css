@@ -36,7 +36,7 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
 
 /* Rótulo técnico: el único mono del cuerpo. */
 .mono, .eyebrow, .terminal-bar, .terminal-foot, .project .links,
-.spec-row .k, .footnote-ref, .seg-group button, .featured-badge,
+.footnote-ref, .seg-group button, .featured-badge,
 .footer-col .col-title, .status {
   font-family: var(--font-mono);
 }
@@ -274,7 +274,10 @@ h2.headline {
   padding: var(--space-5); border-bottom: 1px solid var(--line);
 }
 .spec-row:last-child { border-bottom: none; }
-.spec-row .k { font-size: var(--t-sm); font-weight: var(--w-semibold); color: var(--ink-bright); }
+.spec-row .k {
+  font-family: var(--font-display); font-size: var(--t-sm);
+  font-weight: var(--w-semibold); color: var(--ink-bright); letter-spacing: -.01em;
+}
 .spec-row .v { font-size: var(--t-base); color: var(--ink-dim); line-height: 1.55; margin: 0; }
 .join-subtitle { font-family: var(--font-display); font-size: var(--t-lg); font-weight: var(--w-semibold); margin: var(--space-8) 0 var(--space-4); letter-spacing: -.01em; }
 .join-address { font-family: var(--font-mono); font-size: var(--t-sm); margin: var(--space-2) 0; }
